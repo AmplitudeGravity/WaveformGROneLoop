@@ -1,0 +1,3670 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    154444,       3662]
+NotebookOptionsPosition[    145816,       3529]
+NotebookOutlinePosition[    146311,       3548]
+CellTagsIndexPosition[    146268,       3545]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{"SetDirectory", "[", 
+  RowBox[{"NotebookDirectory", "[", "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"<<", "LiteRed2`"}]}], "Input",
+ CellChangeTimes->{
+  3.831099622535891*^9, 3.852686493699396*^9, {3.90874732151501*^9, 
+   3.90874732216778*^9}, {3.908747401394476*^9, 3.9087474298996964`*^9}, {
+   3.908748379029929*^9, 3.908748406292898*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"2b6699d2-cbac-492b-b904-18fb35640ea4"],
+
+Cell[BoxData["\<\"/Users/gangchen/Documents/GitHub/WaveformGROneLoop\"\>"], \
+"Output",
+ CellChangeTimes->{
+  3.830335665838732*^9, {3.830335697131562*^9, 3.83033571314506*^9}, 
+   3.830496546450869*^9, 3.830498805553753*^9, 3.8305609949366083`*^9, 
+   3.830835288745225*^9, 3.830911212966309*^9, 3.831022432349622*^9, 
+   3.831023853385991*^9, 3.831030418966395*^9, 3.8310307370829477`*^9, 
+   3.8310988370910063`*^9, {3.831099630897216*^9, 3.8310996416379642`*^9}, 
+   3.8325941445304613`*^9, {3.832719237675845*^9, 3.8327192491647*^9}, 
+   3.83394342024522*^9, 3.834015656431528*^9, 3.8344468848897038`*^9, {
+   3.8344902441788483`*^9, 3.83449026801324*^9}, 3.834493475993063*^9, 
+   3.8345547512235937`*^9, 3.834558206074079*^9, 3.834573458398921*^9, 
+   3.8345749773426933`*^9, 3.834638238535688*^9, {3.834794217713991*^9, 
+   3.834794229773787*^9}, 3.83479568285745*^9, 3.834886352171398*^9, 
+   3.836193081887615*^9, 3.848896195192675*^9, 3.8488962348070087`*^9, 
+   3.848896454197332*^9, 3.848906321724709*^9, 3.852184798568062*^9, {
+   3.852686500027166*^9, 3.852686511314744*^9}, 3.8531443670232687`*^9, {
+   3.863692369623261*^9, 3.863692383927328*^9}, 3.8636932425574913`*^9, {
+   3.9087132157732058`*^9, 3.908713231878036*^9}, 3.908714990323207*^9, 
+   3.908747334278366*^9, 3.908747430919319*^9, {3.9087482546999197`*^9, 
+   3.908748258515993*^9}, {3.908748375505582*^9, 3.9087484072387323`*^9}, {
+   3.908752782735334*^9, 3.908752793404811*^9}, {3.908753379741905*^9, 
+   3.9087533959318857`*^9}, 3.908753825623622*^9, 3.9090996121309757`*^9, 
+   3.909915286276877*^9, {3.911456235667222*^9, 3.9114562452541513`*^9}, {
+   3.911554153107326*^9, 3.911554168993088*^9}, {3.9117822980384483`*^9, 
+   3.911782309782236*^9}, 3.9151842180931263`*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"1badbbdc-feff-4168-81fd-27a308faffd4"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"**************** \"\>", "\[InvisibleSpace]", 
+   StyleBox["\<\"LiteRed v2.023\[Beta]\"\>",
+    StripOnInput->False,
+    LineColor->RGBColor[1, 
+      Rational[1, 3], 
+      Rational[1, 3]],
+    FrontFaceColor->RGBColor[1, 
+      Rational[1, 3], 
+      Rational[1, 3]],
+    BackFaceColor->RGBColor[1, 
+      Rational[1, 3], 
+      Rational[1, 3]],
+    GraphicsColor->RGBColor[1, 
+      Rational[1, 3], 
+      Rational[1, 3]],
+    FontWeight->Bold,
+    FontColor->RGBColor[1, 
+      Rational[1, 3], 
+      Rational[1, 3]]], 
+   "\[InvisibleSpace]", "\<\" ********************\\nAuthor: Roman N. Lee, \
+Budker Institute of Nuclear Physics, Novosibirsk.\\nRelease Date: \
+????-??-??\\nTimestamp: Wed 4 Oct 2023 02:34:18\\nRead \
+from:/Users/gangchen/Documents/GitHub/LiteRed3/LiteRed2023.m \
+(CRC32:2227227092,{3930760867, 3144333369, 2439625558})\\n\\nLiteRed stands \
+for \"\>", "\[InvisibleSpace]", 
+   StyleBox["\<\"L\"\>",
+    StripOnInput->False,
+    LineColor->RGBColor[1, 
+      Rational[1, 3], 
+      Rational[1, 3]],
+    FrontFaceColor->RGBColor[1, 
+      Rational[1, 3], 
+      Rational[1, 3]],
+    BackFaceColor->RGBColor[1, 
+      Rational[1, 3], 
+      Rational[1, 3]],
+    GraphicsColor->RGBColor[1, 
+      Rational[1, 3], 
+      Rational[1, 3]],
+    FontColor->RGBColor[1, 
+      Rational[1, 3], 
+      Rational[1, 3]]], "\[InvisibleSpace]", "\<\"oop \"\>", 
+   "\[InvisibleSpace]", 
+   StyleBox["\<\"i\"\>",
+    StripOnInput->False,
+    LineColor->RGBColor[1, 
+      Rational[1, 3], 
+      Rational[1, 3]],
+    FrontFaceColor->RGBColor[1, 
+      Rational[1, 3], 
+      Rational[1, 3]],
+    BackFaceColor->RGBColor[1, 
+      Rational[1, 3], 
+      Rational[1, 3]],
+    GraphicsColor->RGBColor[1, 
+      Rational[1, 3], 
+      Rational[1, 3]],
+    FontColor->RGBColor[1, 
+      Rational[1, 3], 
+      Rational[1, 3]]], "\[InvisibleSpace]", "\<\"n\"\>", "\[InvisibleSpace]", 
+   StyleBox["\<\"te\"\>",
+    StripOnInput->False,
+    LineColor->RGBColor[1, 
+      Rational[1, 3], 
+      Rational[1, 3]],
+    FrontFaceColor->RGBColor[1, 
+      Rational[1, 3], 
+      Rational[1, 3]],
+    BackFaceColor->RGBColor[1, 
+      Rational[1, 3], 
+      Rational[1, 3]],
+    GraphicsColor->RGBColor[1, 
+      Rational[1, 3], 
+      Rational[1, 3]],
+    FontColor->RGBColor[1, 
+      Rational[1, 3], 
+      Rational[1, 3]]], "\[InvisibleSpace]", "\<\"grals \"\>", 
+   "\[InvisibleSpace]", 
+   StyleBox["\<\"Red\"\>",
+    StripOnInput->False,
+    LineColor->RGBColor[1, 
+      Rational[1, 3], 
+      Rational[1, 3]],
+    FrontFaceColor->RGBColor[1, 
+      Rational[1, 3], 
+      Rational[1, 3]],
+    BackFaceColor->RGBColor[1, 
+      Rational[1, 3], 
+      Rational[1, 3]],
+    GraphicsColor->RGBColor[1, 
+      Rational[1, 3], 
+      Rational[1, 3]],
+    FontColor->RGBColor[1, 
+      Rational[1, 3], 
+      Rational[1, 3]]], 
+   "\[InvisibleSpace]", "\<\"uction.\\nThe package is designed for the search \
+and application of the Integration-By-Part reduction rules. It also contains \
+some other useful tools.\\n\\nSee ?LiteRed`* for a list of functions. \"\>"}],
+  
+  SequenceForm["**************** ", 
+   Style["LiteRed v2.023\[Beta]", {Bold, 
+     RGBColor[1, 
+      Rational[1, 3], 
+      Rational[1, 3]]}], 
+   " ********************\nAuthor: Roman N. Lee, Budker Institute of Nuclear \
+Physics, Novosibirsk.\nRelease Date: ????-??-??\nTimestamp: Wed 4 Oct 2023 \
+02:34:18\nRead from:/Users/gangchen/Documents/GitHub/LiteRed3/LiteRed2023.m \
+(CRC32:2227227092,{3930760867, 3144333369, 2439625558})\n\nLiteRed stands for \
+", 
+   Style["L", {
+     RGBColor[1, 
+      Rational[1, 3], 
+      Rational[1, 3]]}], "oop ", 
+   Style["i", {
+     RGBColor[1, 
+      Rational[1, 3], 
+      Rational[1, 3]]}], "n", 
+   Style["te", {
+     RGBColor[1, 
+      Rational[1, 3], 
+      Rational[1, 3]]}], "grals ", 
+   Style["Red", {
+     RGBColor[1, 
+      Rational[1, 3], 
+      Rational[1, 3]]}], 
+   "uction.\nThe package is designed for the search and application of the \
+Integration-By-Part reduction rules. It also contains some other useful \
+tools.\n\nSee ?LiteRed`* for a list of functions. "],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.90874840751504*^9, {3.908752783594558*^9, 3.908752794203731*^9}, {
+   3.908753379761125*^9, 3.908753396721404*^9}, 3.9087538263956223`*^9, 
+   3.909099613599515*^9, 3.909915287097024*^9, {3.911456235685091*^9, 
+   3.911456246056847*^9}, {3.911554153129449*^9, 3.911554172545549*^9}, {
+   3.911782298058482*^9, 3.911782315034713*^9}, 3.915184218919051*^9},
+ CellLabel->
+  "During evaluation of \
+In[1]:=",ExpressionUUID->"adbcf2c8-5014-45ca-bd5c-90ffb44b8913"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "LiteRed`*"}]], "Input",
+ CellLabel->"In[7]:=",ExpressionUUID->"3c249571-9c49-45db-988e-755c1f6348cb"],
+
+Cell[BoxData[
+ StyleBox[
+  FrameBox[GridBox[{
+     {
+      DynamicModuleBox[{Typeset`open$$ = True}, 
+       PaneSelectorBox[{False->
+        ButtonBox[
+         RowBox[{
+          
+          DynamicBox[FEPrivate`FrontEndResource[
+           "FEBitmaps", "RightPointerOpener"]], " ", 
+          StyleBox["LiteRed`", "InformationGridGroupHeader"]}],
+         Appearance->None,
+         BaseStyle->"InformationGridLink",
+         ButtonFunction:>FEPrivate`Set[Typeset`open$$, True],
+         Evaluator->Automatic,
+         Method->"Preemptive"], True->
+        PaneBox[GridBox[{
+           {
+            ButtonBox[
+             RowBox[{
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"],
+               ImageSizeCache->{13., {3., 10.}}], " ", 
+              StyleBox["LiteRed`", "InformationGridGroupHeader"]}],
+             Appearance->None,
+             BaseStyle->"InformationGridLink",
+             ButtonFunction:>FEPrivate`Set[Typeset`open$$, False],
+             Evaluator->Automatic,
+             Method->"Preemptive"]},
+           {
+            PaneBox[GridBox[{
+               {
+                ButtonBox[
+                 StyleBox["A", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "A", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["GramM", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "GramM", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["NoRules", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "NoRules", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["ABIBP", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "ABIBP", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["GramP", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "GramP", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["NoRules$", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "NoRules$", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["ABIBPLI", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "ABIBPLI", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["GramPFunction", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "GramPFunction", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["NumDepth", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "NumDepth", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["ABLI", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "ABLI", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["GraphSort", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "GraphSort", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["NumeratorsToDShifts", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "NumeratorsToDShifts", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["AddjRule", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "AddjRule", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["GraphToAmplitude", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "GraphToAmplitude", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["Parameters", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "Parameters", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["AnalyzeSectors", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "AnalyzeSectors", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["GraphToDs", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "GraphToDs", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["PFGB", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "PFGB", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["AtoLeft", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "AtoLeft", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["Highj", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "Highj", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["PFjSubsectors", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "PFjSubsectors", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["AttachGraph", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "AttachGraph", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["HighjIndex", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "HighjIndex", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["PFReduce", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "PFReduce", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["B", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "B", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["Highjs", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "Highjs", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["PolyNForm", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "PolyNForm", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["BasisDirectory", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "BasisDirectory", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["IBP", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "IBP", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["PolySignature", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "PolySignature", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["BasisSectors", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "BasisSectors", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["IBPLI", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "IBPLI", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 
+                 StyleBox["PolySignaturePermutations", 
+                  "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "PolySignaturePermutations", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["BiggestSectors", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "BiggestSectors", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["IBPReduce", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "IBPReduce", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["PowerShifts", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "PowerShifts", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["BloodhoundSearch", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "BloodhoundSearch", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["IBPReduceDen", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "IBPReduceDen", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["RaiseDim", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "RaiseDim", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["CheckDefinitions", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "CheckDefinitions", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["IBPSelect", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "IBPSelect", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["RaisingDRR", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "RaisingDRR", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["CheckZeroAlways", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "CheckZeroAlways", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["IdentifyMIs", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "IdentifyMIs", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["RefreshMIs", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "RefreshMIs", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["CheckZeroFunction", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "CheckZeroFunction", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["InverseTildeConjugate", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "InverseTildeConjugate", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["Relations", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "Relations", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["Collectj", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "Collectj", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["j", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "j", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["RRs", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "RRs", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["CollectjList", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "CollectjList", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["jComplexity", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "jComplexity", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["SawToothLine", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "SawToothLine", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["CompleteMomentaFlow", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "CompleteMomentaFlow", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["jExtRules", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "jExtRules", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["SectorHierarchy", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "SectorHierarchy", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["CRulesLE", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "CRulesLE", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["jGraph", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "jGraph", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["SectorLayer", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "SectorLayer", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["CurlyLine", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "CurlyLine", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["jGraphPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "jGraphPlot", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["SectorsMappings", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "SectorsMappings", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["CurrentState", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "CurrentState", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["jLevel", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "jLevel", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["SectorsPattern", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "SectorsPattern", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["CutDs", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "CutDs", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["jPattern", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "jPattern", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["SetToBasesRule", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "SetToBasesRule", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["Definitions", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "Definitions", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["jRules", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "jRules", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["SimpleSectors", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "SimpleSectors", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["Dinv", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "Dinv", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["jRulesDen", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "jRulesDen", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["SimplifyAlways", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "SimplifyAlways", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["DiskRecover", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "DiskRecover", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["js", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "js", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["SimplifyFunction", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "SimplifyFunction", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["DiskSave", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "DiskSave", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["jSector", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "jSector", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["Solvej", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "Solvej", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["Ds", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "Ds", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["jsFPIBP", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "jsFPIBP", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["SolvejSector", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "SolvejSector", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["DsBasisQ", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "DsBasisQ", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["jSignature", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "jSignature", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["SolvejSectorD", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "SolvejSectorD", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["DsSetQ", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "DsSetQ", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["jsOrder", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "jsOrder", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["SolvejSectorDen", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "SolvejSectorDen", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["EMs", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "EMs", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["jsSignature", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "jsSignature", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["SolvejSectorTag", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "SolvejSectorTag", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["ExecuteDefinitions", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "ExecuteDefinitions", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["jsSignaturePermutations", "InformationGridButton"],
+                 
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "jsSignaturePermutations", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["SolvejTag", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "SolvejTag", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["ExtMappedSectors", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "ExtMappedSectors", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["jSubsectors", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "jSubsectors", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["SPs", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "SPs", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["ExtSectorsMappings", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "ExtSectorsMappings", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["jSymmetries", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "jSymmetries", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["SR", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "SR", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["ExtUniqueSectors", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "ExtUniqueSectors", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["jSymmetriesDen", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "jSymmetriesDen", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["SubstituteAlways", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "SubstituteAlways", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["Factor1", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "Factor1", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["jVars", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "jVars", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["TildeConjugate", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "TildeConjugate", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["Factor2", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "Factor2", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["LI", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "LI", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ToAB", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "ToAB", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["Factor3", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "Factor3", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["LMs", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "LMs", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["todo", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "todo", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["FactorizeFP", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "FactorizeFP", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["LowerDim", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "LowerDim", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ToDShifts", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "ToDShifts", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["FactorizejSector", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "FactorizejSector", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["LoweringDRR", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "LoweringDRR", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["Toj", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "Toj", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["FermatIBPReduce", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "FermatIBPReduce", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["MakeDSystem", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "MakeDSystem", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ToMIsRule", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "ToMIsRule", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["FeynGraphPlot", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "FeynGraphPlot", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["MakeOrderMatrix", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "MakeOrderMatrix", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ToMyMIs", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "ToMyMIs", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["FeynParGdG", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "FeynParGdG", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["MappedSectorQ", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "MappedSectorQ", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["UniqueSectorQ", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "UniqueSectorQ", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["FeynParUF", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "FeynParUF", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["MappedSectors", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "MappedSectors", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["UniqueSectors", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "UniqueSectors", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["FeynParUVM", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "FeynParUVM", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["MappedSectorsDen", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "MappedSectorsDen", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["UniqueSectorsDen", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "UniqueSectorsDen", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["FindExtSymmetries", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "FindExtSymmetries", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["MaxDepth", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "MaxDepth", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["WavyLine", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "WavyLine", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["FindShifts", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "FindShifts", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["MIs", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "MIs", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ZerojRule", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "ZerojRule", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["FindSymmetries", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "FindSymmetries", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["MIsHierarchyGraph", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "MIsHierarchyGraph", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ZeroSectorQ", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "ZeroSectorQ", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["FindSymmetriesDen", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "FindSymmetriesDen", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["MyMIs", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "MyMIs", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["ZeroSectors", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "ZeroSectors", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["FPIBP", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "FPIBP", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["NamingFunction", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "NamingFunction", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["$ActiveBases", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "$ActiveBases", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["FromAB", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "FromAB", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["NDs", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "NDs", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["$LiteRedHomeDirectory", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "$LiteRedHomeDirectory", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["FromDShifts", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "FromDShifts", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["NewBasis", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "NewBasis", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["$LiteRedLog", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "$LiteRedLog", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["Fromj", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "Fromj", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["NewDsBases", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "NewDsBases", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["$LiteRedMonitor", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "$LiteRedMonitor", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["FromTildeAB", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "FromTildeAB", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["NewDsBasis", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "NewDsBasis", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["$LiteRedReleaseDate", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "$LiteRedReleaseDate", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["GenerateFeynParUF", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "GenerateFeynParUF", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["NewDsSet", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "NewDsSet", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["$LiteRedSyzygy", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "$LiteRedSyzygy", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["GenerateFPIBP", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "GenerateFPIBP", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["NMIs", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "NMIs", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["$LiteRedVersion", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "$LiteRedVersion", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["GenerateIBP", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "GenerateIBP", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["NonZeroSectorQ", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "NonZeroSectorQ", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["$NamingFunction", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "$NamingFunction", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic]},
+               {
+                ButtonBox[
+                 StyleBox["GeneratePFGB", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "GeneratePFGB", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], 
+                ButtonBox[
+                 StyleBox["NonZeroSectors", "InformationGridButton"],
+                 Appearance->None,
+                 BaseStyle->"InformationGridLink",
+                 
+                 ButtonData:>{
+                  "Info-3da33996-08b8-4948-ad7a-3c01070bb57e", {
+                   "NonZeroSectors", "LiteRed`"}, False},
+                 ButtonNote->"LiteRed`",
+                 Evaluator->Automatic], ""}
+              },
+              DefaultBaseStyle->"Text",
+              
+              GridBoxAlignment->{
+               "Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+              GridBoxItemSize->{"Columns" -> {{
+                   Scaled[0.31666666666666665`]}}}],
+             ImageMargins->{{10, 0}, {0, 2}}]}
+          },
+          GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}}],
+         FrameMargins->{{0, 0}, {8, 0}}]}, Dynamic[Typeset`open$$],
+        ImageSize->Automatic]]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+    GridBoxDividers->{"ColumnsIndexed" -> {{False}}, "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.8]}, 
+        Offset[0.2]}}],
+   BaseStyle->"InformationTitleFrame"], "InformationGridPlain"]], "Output",
+ CellChangeTimes->{3.852686517549267*^9, 3.9087142933434887`*^9, 
+  3.90874854451011*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"352328fc-203d-4faf-a254-943e523f5373"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["IBPRules(Do not run it for using)", "Section",
+ CellChangeTimes->{{3.8830024136623573`*^9, 3.883002417603277*^9}, {
+  3.8830024525966787`*^9, 
+  3.883002469583394*^9}},ExpressionUUID->"ffbf3c0a-bd66-4da1-a0b7-\
+fdfa2ad8b713"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SetDirectory", "[", 
+  RowBox[{"NotebookDirectory", "[", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8828607469875193`*^9, 3.882860759352353*^9}, {
+  3.883000435457246*^9, 3.883000504708455*^9}, {3.883000539168479*^9, 
+  3.8830005447870197`*^9}, {3.883431407085822*^9, 3.883431407878429*^9}, {
+  3.8992011267537365`*^9, 3.8992011275549836`*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"df8ec0ca-c674-4bc3-ba8d-a93ed31e1233"],
+
+Cell[BoxData["\<\"/Users/gangchen/Documents/GitHub/WaveformGROneLoop\"\>"], \
+"Output",
+ CellChangeTimes->{
+  3.882860760081532*^9, 3.8828609347268143`*^9, 3.883000382420218*^9, {
+   3.883000476424962*^9, 3.883000484497087*^9}, {3.8830005453411417`*^9, 
+   3.883000565186677*^9}, 3.883431410077261*^9, 3.8841601985007086`*^9, 
+   3.884831373576439*^9, 3.885436446904515*^9, 3.885436697352312*^9, 
+   3.8854482208616667`*^9, 3.8855266284479647`*^9, 3.885540532020135*^9, 
+   3.885976108301862*^9, 3.8861291377568507`*^9, 3.886153802229*^9, 
+   3.8863940350992947`*^9, 3.8865691658687553`*^9, 3.8875422177275796`*^9, 
+   3.887543770519807*^9, 3.887544633615615*^9, 3.887545057782415*^9, 
+   3.887711495455248*^9, 3.887711861992443*^9, 3.891311980023834*^9, 
+   3.8918506352332306`*^9, 3.898150492912525*^9, 3.898168082080628*^9, 
+   3.8982472560553284`*^9, 3.898406781708156*^9, 3.899201127993268*^9, 
+   3.8992627460148706`*^9, 3.900044838321046*^9, 3.90023305912597*^9, 
+   3.90030299556102*^9, 3.9028460395735006`*^9, 3.908713522339109*^9, 
+   3.908714320749003*^9, 3.908714724875278*^9, {3.908714769773683*^9, 
+   3.9087147915669317`*^9}, 3.908715001580701*^9, 3.908748695221115*^9, 
+   3.9087487419177*^9, 3.9087534064095583`*^9, 3.908753837262496*^9, 
+   3.909099620886663*^9, 3.90991529320366*^9, 3.9114562499559517`*^9, 
+   3.911554422765576*^9, 3.911601466036666*^9, 3.9117823154286118`*^9, 
+   3.911782359219952*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"5805e73a-e811-40e9-8f69-94449425768e"]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{"ClearAll", "[", "repIBPVar", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"repIBPVar", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"a_", "[", "i_", "]"}], ":>", " ", 
+     RowBox[{
+      RowBox[{"ToExpression", "[", 
+       RowBox[{"StringJoin", "[", 
+        RowBox[{
+         RowBox[{"ToString", "[", "a", "]"}], ",", 
+         RowBox[{"ToString", "[", "i", "]"}]}], "]"}], "]"}], "/;", 
+      RowBox[{
+       RowBox[{"a", "=!=", "List"}], "&&", 
+       RowBox[{"a", "=!=", "c"}], "&&", 
+       RowBox[{"a", "=!=", "e"}], "&&", 
+       RowBox[{"a", "=!=", "g"}]}]}]}], "}"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.8841603027519484`*^9, 3.88416031345644*^9}, {
+   3.8864779263440094`*^9, 3.886477933214407*^9}, 3.8877116381189237`*^9, {
+   3.898247075734127*^9, 3.898247081533256*^9}, {3.8982473067486773`*^9, 
+   3.8982473092158947`*^9}, {3.900064082793358*^9, 3.900064124836246*^9}, 
+   3.900067403584309*^9, {3.9002486482021637`*^9, 3.900248654572461*^9}, {
+   3.9086430211180916`*^9, 3.9086430244921627`*^9}, {3.9086430550498023`*^9, 
+   3.9086430577622538`*^9}, 3.9114574809164133`*^9},
+ CellLabel->"In[5]:=",ExpressionUUID->"e6e824d7-c2e1-4089-b2b2-b38cb4d1adb4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SetDim", "[", "d", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Declare", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"l1", ",", "q1", ",", "v1", ",", "v2", ",", "b1", ",", "v0"}], 
+    "}"}], ",", "Vector", ",", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", "u", ",", "bb", ",", "w1"}], "}"}], ",", "Number"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SetConstraints", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"v1", ",", "v2", ",", "b1", ",", "v0"}], "}"}], ",", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"sp", "[", 
+       RowBox[{"v1", ",", "v1"}], "]"}], "=", "1"}], ";", 
+     RowBox[{
+      RowBox[{"sp", "[", 
+       RowBox[{"v2", ",", "v2"}], "]"}], "=", "1"}], ";", 
+     RowBox[{
+      RowBox[{"sp", "[", 
+       RowBox[{"b1", ",", "v1"}], "]"}], "=", "0"}], ";", 
+     RowBox[{
+      RowBox[{"sp", "[", 
+       RowBox[{"b1", ",", "b1"}], "]"}], "=", "bb"}], ";", 
+     RowBox[{
+      RowBox[{"sp", "[", 
+       RowBox[{"b1", ",", "v2"}], "]"}], "=", "0"}], ";", 
+     RowBox[{
+      RowBox[{"sp", "[", 
+       RowBox[{"b1", ",", "v0"}], "]"}], "=", "0"}], ";", 
+     RowBox[{
+      RowBox[{"sp", "[", 
+       RowBox[{"v0", ",", "v1"}], "]"}], "=", "0"}], ";", 
+     RowBox[{
+      RowBox[{"sp", "[", 
+       RowBox[{"v0", ",", "v2"}], "]"}], "=", "0"}], ";", 
+     RowBox[{
+      RowBox[{"sp", "[", 
+       RowBox[{"v1", ",", "v2"}], "]"}], "=", "y"}], ";", 
+     RowBox[{
+      RowBox[{"sp", "[", 
+       RowBox[{"v0", ",", "v0"}], "]"}], "=", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"y", "^", "2"}], "-", "1"}], ")"}], "bb"}]}], ";"}]}], "\n", 
+   "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.908753675585668*^9, 3.9087537863837757`*^9}, {
+   3.909099559516127*^9, 3.909099561846899*^9}, {3.9099153707915373`*^9, 
+   3.9099154164703293`*^9}, {3.909915497648117*^9, 3.9099155959355583`*^9}, {
+   3.9114562572043123`*^9, 3.911456347873233*^9}, {3.911456383836796*^9, 
+   3.91145640250694*^9}, {3.911456458379733*^9, 3.9114564584586067`*^9}, {
+   3.911456524484521*^9, 3.911456554449729*^9}, {3.9114565951986303`*^9, 
+   3.911456651761277*^9}, {3.9114567274982967`*^9, 3.911456747669545*^9}, {
+   3.911456784435741*^9, 3.9114568264774*^9}, {3.911457032295641*^9, 
+   3.911457085066718*^9}, {3.911457509820956*^9, 3.9114575271586723`*^9}, {
+   3.9114577905139437`*^9, 3.911457791080125*^9}, {3.911459019232213*^9, 
+   3.911459045885607*^9}, {3.911459083960435*^9, 3.9114591368961678`*^9}, 
+   3.911466813861823*^9, 3.911466944660428*^9, {3.9114715737128*^9, 
+   3.911471605498377*^9}, {3.911471662993582*^9, 3.911471665629739*^9}, {
+   3.9115544534736023`*^9, 3.9115544548978*^9}, {3.911554495135257*^9, 
+   3.911554495617795*^9}, {3.9115545790271673`*^9, 3.911554652141584*^9}, {
+   3.91155477290775*^9, 3.911554775769559*^9}, {3.911554919939666*^9, 
+   3.9115549500323353`*^9}, {3.911555196393471*^9, 3.911555199669973*^9}, 
+   3.911601521504448*^9, {3.911781972930868*^9, 3.911781992764597*^9}, 
+   3.911782091355021*^9, {3.9117821324641848`*^9, 3.911782159651353*^9}, {
+   3.9117821938816643`*^9, 3.91178223207625*^9}, {3.911783060145455*^9, 
+   3.911783061049859*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"4ddcc5b7-56da-4e24-9e21-91b2411c1ec9"],
+
+Cell[BoxData["\<\"Executing nothing. Everything was already set?\"\>"], \
+"Print",
+ CellChangeTimes->{
+  3.9114575281956263`*^9, 3.911457791884407*^9, 3.911459189202149*^9, {
+   3.911466927165576*^9, 3.9114669512854357`*^9}, 3.911471671943083*^9, 
+   3.911554951007639*^9, 3.911555201938916*^9, 3.9116014379886847`*^9, 
+   3.9116015222131863`*^9, 3.91178236419718*^9, 3.911783062775241*^9},
+ CellLabel->
+  "During evaluation of \
+In[10]:=",ExpressionUUID->"9fda7bac-5cfa-4649-9c0f-ffde676eedaa"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"dotIBPlistCut", "=", 
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"dot", "[", 
+        RowBox[{
+         RowBox[{"q", "[", "1", "]"}], ",", 
+         RowBox[{"q", "[", "1", "]"}]}], "]"}], "-", "u", "+", "bb"}], ",", 
+      RowBox[{"dot", "[", 
+       RowBox[{
+        RowBox[{"l", "[", "1", "]"}], ",", 
+        RowBox[{"l", "[", "1", "]"}]}], "]"}], ",", 
+      RowBox[{
+       RowBox[{"dot", "[", 
+        RowBox[{
+         RowBox[{"l", "[", "1", "]"}], ",", 
+         RowBox[{"v", "[", "2", "]"}]}], "]"}], "+", 
+       RowBox[{"dot", "[", 
+        RowBox[{
+         RowBox[{"b", "[", "1", "]"}], ",", 
+         RowBox[{"v", "[", "2", "]"}]}], "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"dot", "[", 
+        RowBox[{
+         RowBox[{"l", "[", "1", "]"}], ",", 
+         RowBox[{"l", "[", "1", "]"}]}], "]"}], "+", 
+       RowBox[{"2", " ", 
+        RowBox[{"dot", "[", 
+         RowBox[{
+          RowBox[{"l", "[", "1", "]"}], ",", 
+          RowBox[{"q", "[", "1", "]"}]}], "]"}]}], "+", 
+       RowBox[{"dot", "[", 
+        RowBox[{
+         RowBox[{"q", "[", "1", "]"}], ",", 
+         RowBox[{"q", "[", "1", "]"}]}], "]"}]}], ",", 
+      RowBox[{"dot", "[", 
+       RowBox[{
+        RowBox[{"l", "[", "1", "]"}], ",", 
+        RowBox[{"b", "[", "1", "]"}]}], "]"}], ",", 
+      RowBox[{"dot", "[", 
+       RowBox[{
+        RowBox[{"l", "[", "1", "]"}], ",", 
+        RowBox[{"v", "[", "1", "]"}]}], "]"}], ",", 
+      RowBox[{"dot", "[", 
+       RowBox[{
+        RowBox[{"q", "[", "1", "]"}], ",", 
+        RowBox[{"v", "[", "1", "]"}]}], "]"}], ",", 
+      RowBox[{
+       RowBox[{"dot", "[", 
+        RowBox[{
+         RowBox[{"q", "[", "1", "]"}], ",", 
+         RowBox[{"v", "[", "2", "]"}]}], "]"}], "+", "w1"}], ",", 
+      RowBox[{
+       RowBox[{"dot", "[", 
+        RowBox[{
+         RowBox[{"q", "[", "1", "]"}], ",", 
+         RowBox[{"b", "[", "1", "]"}]}], "]"}], "+", "u"}], ",", 
+      RowBox[{"dot", "[", 
+       RowBox[{
+        RowBox[{"l", "[", "1", "]"}], ",", 
+        RowBox[{"v", "[", "0", "]"}]}], "]"}], ",", 
+      RowBox[{"dot", "[", 
+       RowBox[{
+        RowBox[{"q", "[", "1", "]"}], ",", 
+        RowBox[{"v", "[", "0", "]"}]}], "]"}]}], "}"}], "}"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.908748890419014*^9, 3.908748896026902*^9}, 
+   3.9099157040673437`*^9, {3.911457136869234*^9, 3.911457187404552*^9}, {
+   3.9114572332907887`*^9, 3.9114572654479847`*^9}, {3.9114573184046717`*^9, 
+   3.911457359737195*^9}, {3.911457399954583*^9, 3.911457420234887*^9}, {
+   3.9114575441205883`*^9, 3.9114575468733807`*^9}, {3.911459152691429*^9, 
+   3.9114591837836*^9}, 3.911465141846882*^9, 3.911466051482236*^9, {
+   3.9114671862686167`*^9, 3.911467192420948*^9}, {3.911471364833069*^9, 
+   3.9114713707845573`*^9}, 3.911471424913968*^9, {3.9115549992003813`*^9, 
+   3.911555004878525*^9}, {3.911555041893119*^9, 3.911555069853375*^9}, 
+   3.911781545544133*^9, {3.911781611935466*^9, 3.911781635506835*^9}, {
+   3.911781790496538*^9, 3.911781807043358*^9}, {3.91178185609867*^9, 
+   3.911781883091612*^9}, 3.911781957081954*^9, {3.911782259006701*^9, 
+   3.9117822616849537`*^9}, {3.911782397421341*^9, 3.911782399435397*^9}, {
+   3.9117824377746162`*^9, 3.9117824471938667`*^9}, 3.9117825179097157`*^9, {
+   3.911782611748188*^9, 3.911782734525745*^9}, 3.911782769897478*^9, {
+   3.911782892740203*^9, 3.911782893836956*^9}, {3.911782932992056*^9, 
+   3.911782945564104*^9}, {3.91178297675839*^9, 3.911783055497501*^9}, {
+   3.911783101182118*^9, 3.911783128732671*^9}, 3.911783312312414*^9},
+ CellLabel->"In[16]:=",ExpressionUUID->"eb7c7b30-ecf4-4f04-a13f-e83746c54d68"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ds1", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"dotIBPlistCut", "[", 
+     RowBox[{"[", "1", "]"}], "]"}], "/.", 
+    RowBox[{"dot", "->", "sp"}]}], "/.", "repIBPVar"}]}]], "Input",
+ CellChangeTimes->{{3.9087489329002867`*^9, 3.908748944599216*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"ca571e8e-dbd9-43ba-ad0c-3c29bdd30d71"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"bb", "-", "u", "+", 
+    RowBox[{"q1", "\[CenterDot]", "q1"}]}], ",", 
+   RowBox[{"l1", "\[CenterDot]", "l1"}], ",", 
+   RowBox[{"l1", "\[CenterDot]", "v2"}], ",", 
+   RowBox[{
+    RowBox[{"l1", "\[CenterDot]", "l1"}], "+", 
+    RowBox[{"2", " ", 
+     RowBox[{"l1", "\[CenterDot]", "q1"}]}], "+", 
+    RowBox[{"q1", "\[CenterDot]", "q1"}]}], ",", 
+   RowBox[{"b1", "\[CenterDot]", "l1"}], ",", 
+   RowBox[{"l1", "\[CenterDot]", "v1"}], ",", 
+   RowBox[{"q1", "\[CenterDot]", "v1"}], ",", 
+   RowBox[{"w1", "+", 
+    RowBox[{"q1", "\[CenterDot]", "v2"}]}], ",", 
+   RowBox[{"u", "+", 
+    RowBox[{"b1", "\[CenterDot]", "q1"}]}], ",", 
+   RowBox[{"l1", "\[CenterDot]", "v0"}], ",", 
+   RowBox[{"q1", "\[CenterDot]", "v0"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.90874894525688*^9, 3.908753860424616*^9, 3.909099689612445*^9, 
+   3.909915710538795*^9, 3.909915752547059*^9, 3.9114574444369497`*^9, 
+   3.9114574843706293`*^9, {3.911457533000677*^9, 3.911457551703867*^9}, 
+   3.911457683831134*^9, 3.911457801528872*^9, 3.911459193542363*^9, 
+   3.911466978589314*^9, 3.911467198152734*^9, 3.911471496420981*^9, 
+   3.911471680213511*^9, 3.9115550844323063`*^9, 3.911555206190407*^9, 
+   3.911783147202468*^9, 3.91178331500259*^9},
+ CellLabel->"Out[17]=",ExpressionUUID->"d8f18663-2cc4-4cc4-bab4-dd06fdaa39af"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ds1", "//", "Length"}]], "Input",
+ CellChangeTimes->{{3.911467122152727*^9, 3.9114671232425747`*^9}},
+ CellLabel->"In[18]:=",ExpressionUUID->"b8fc74c8-849c-481c-8c39-1a4238f3a973"],
+
+Cell[BoxData["11"], "Output",
+ CellChangeTimes->{3.911467123667377*^9, 3.9114672000232162`*^9, 
+  3.911471498838614*^9, 3.9114716849450893`*^9, 3.911555086201707*^9, 
+  3.911783149050178*^9, 3.911783317445073*^9},
+ CellLabel->"Out[18]=",ExpressionUUID->"8ab7c5ee-1042-4205-8269-b9b332482237"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"NewDsBasis", "[", 
+  RowBox[{"gr2", ",", "ds1", ",", 
+   RowBox[{"{", 
+    RowBox[{"l1", ",", "q1"}], "}"}], ",", 
+   RowBox[{"SectorsPattern", "->", 
+    RowBox[{"{", 
+     RowBox[{"__", ",", "0", ",", "0"}], "}"}]}], ",", 
+   RowBox[{"CutDs", "->", 
+    RowBox[{"{", 
+     RowBox[{
+     "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "1", ",", "1", ",", 
+      "1", ",", "1", ",", "0", ",", "0"}], "}"}]}], ",", 
+   RowBox[{"Directory", "\[Rule]", "\"\<radiOne\>\""}], ",", 
+   RowBox[{"SolvejSector", "\[Rule]", "True"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9087490148949127`*^9, 3.908749030747842*^9}, {
+   3.908749086455943*^9, 3.908749104126918*^9}, {3.90874919980816*^9, 
+   3.908749210744774*^9}, {3.908754285763595*^9, 3.9087543056111403`*^9}, {
+   3.9099157835789022`*^9, 3.90991578393684*^9}, {3.9114571001403522`*^9, 
+   3.911457101878436*^9}, {3.91145757864331*^9, 3.911457668827565*^9}, 
+   3.911457710966714*^9, {3.911459201051785*^9, 3.911459215817943*^9}, {
+   3.9114717754470263`*^9, 3.9114718066978197`*^9}, {3.911555106761014*^9, 
+   3.9115551327984943`*^9}, {3.9115553453749933`*^9, 3.911555357920417*^9}, {
+   3.9117833858969097`*^9, 3.911783401799021*^9}, {3.911783432531602*^9, 
+   3.911783458388226*^9}},
+ CellLabel->"In[19]:=",ExpressionUUID->"545273ad-7e37-4311-8968-023f4b794f14"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"gr2 is valid basis. The definitions of the basis will be \
+saved in \\\"radiOne\\\" directory.\\n    Ds[gr2] \[LongDash] \
+denominators,\\n    SPs[gr2] \[LongDash] scalar products involving loop \
+momenta,\\n    LMs[gr2] \[LongDash] loop momenta,\\n    EMs[gr2] \[LongDash] \
+external momenta,\\n    Parameters[gr2] \[LongDash] parameters (invariants, \
+masses, dimension),\\n    Toj[gr2] \[LongDash] rules to transform scalar \
+products to denominators,\\n    CutDs[gr2] \[LongDash] flag vector of cut \
+denominators.\"\>"], "Print",
+ CellChangeTimes->{
+  3.9114578043270493`*^9, 3.911459218114592*^9, 3.911467219015892*^9, {
+   3.911471778170314*^9, 3.911471807657823*^9}, 3.911555133801708*^9, 
+   3.911555208585226*^9, 3.911555365417521*^9, 3.91178347891061*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"68df0a62-f459-4ab3-9f4f-202018fcad08"],
+
+Cell[BoxData["\<\"The directory radiOne has been created.\"\>"], "Print",
+ CellChangeTimes->{
+  3.9114578043270493`*^9, 3.911459218114592*^9, 3.911467219015892*^9, {
+   3.911471778170314*^9, 3.911471807657823*^9}, 3.911555133801708*^9, 
+   3.911555208585226*^9, 3.911555365417521*^9, 3.911783479040366*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"7bfc26f0-c9fe-4948-87ec-b5eb7e9500f8"],
+
+Cell[BoxData[
+ StyleBox["\<\"Generating IBP\[Ellipsis]\"\>",
+  StripOnInput->False,
+  FontWeight->Bold]], "Print",
+ CellChangeTimes->{
+  3.9114578043270493`*^9, 3.911459218114592*^9, 3.911467219015892*^9, {
+   3.911471778170314*^9, 3.911471807657823*^9}, 3.911555133801708*^9, 
+   3.911555208585226*^9, 3.911555365417521*^9, 3.9117834790474777`*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"a620dbb2-7057-4780-8b02-cf14029dc2ae"],
+
+Cell[BoxData["\<\"Identities are generated.\\n    IBP[gr2] \[LongDash] \
+integration-by-part identities,\\n    LI[gr2] \[LongDash] Lorentz invariance \
+identities.\"\>"], "Print",
+ CellChangeTimes->{
+  3.9114578043270493`*^9, 3.911459218114592*^9, 3.911467219015892*^9, {
+   3.911471778170314*^9, 3.911471807657823*^9}, 3.911555133801708*^9, 
+   3.911555208585226*^9, 3.911555365417521*^9, 3.9117834790734243`*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"c000e323-9380-48e3-aa5d-b30b8d2797c1"],
+
+Cell[BoxData[
+ StyleBox["\<\"Analyzing sectors\[Ellipsis]\"\>",
+  StripOnInput->False,
+  FontWeight->Bold]], "Print",
+ CellChangeTimes->{
+  3.9114578043270493`*^9, 3.911459218114592*^9, 3.911467219015892*^9, {
+   3.911471778170314*^9, 3.911471807657823*^9}, 3.911555133801708*^9, 
+   3.911555208585226*^9, 3.911555365417521*^9, 3.911783479074844*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"224bde25-3203-4f57-b0a8-a1a6e1ac3608"],
+
+Cell[BoxData["\<\"Found 500(12) zero(nonzero) sectors out of 512.\\n    \
+ZeroSectors[gr2] \[LongDash] zero sectors,\\n    NonZeroSectors[gr2] \
+\[LongDash] nonzero sectors,\\n    SimpleSectors[gr2] \[LongDash] simple \
+sectors (no nonzero subsectors),\\n    BasisSectors[gr2] \[LongDash] basis \
+sectors (at least one immediate subsector is zero),\\n    ZerojRule[gr2] \
+\[LongDash] a rule to nullify all zero j[gr2\[Ellipsis]],\\n    CutDs[gr2] \
+\[LongDash] a flag list of cut denominators (1=cut).\"\>"], "Print",
+ CellChangeTimes->{
+  3.9114578043270493`*^9, 3.911459218114592*^9, 3.911467219015892*^9, {
+   3.911471778170314*^9, 3.911471807657823*^9}, 3.911555133801708*^9, 
+   3.911555208585226*^9, 3.911555365417521*^9, 3.911783479242806*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"d1680507-552e-42ff-bcb4-7f3859c5a0b6"],
+
+Cell[BoxData[
+ StyleBox["\<\"Finding symmetries\[Ellipsis]\"\>",
+  StripOnInput->False,
+  FontWeight->Bold]], "Print",
+ CellChangeTimes->{
+  3.9114578043270493`*^9, 3.911459218114592*^9, 3.911467219015892*^9, {
+   3.911471778170314*^9, 3.911471807657823*^9}, 3.911555133801708*^9, 
+   3.911555208585226*^9, 3.911555365417521*^9, 3.911783479244132*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"cfdf44a2-32e7-400d-981e-bcba8b2aa257"],
+
+Cell[BoxData["\<\"Found 0 mapped sectors and 12 unique sectors.\\n    \
+UniqueSectors[gr2] \[LongDash] unique sectors.\\n    MappedSectors[gr2] \
+\[LongDash] mapped sectors.\\n    SR[gr2][\[Ellipsis]] \[LongDash] symmetry \
+relations for j[gr2,\[Ellipsis]] from UniqueSectors[gr2].\\n    \
+jSymmetries[gr2,\[Ellipsis]] \[LongDash] symmetry rules for the sector \
+js[gr2,\[Ellipsis]] in UniqueSectors[gr2].\\n    jRules[gr2,\[Ellipsis]] \
+\[LongDash] reduction rules for j[gr2,\[Ellipsis]] from \
+MappedSectors[gr2].\\n    SectorsMappings[gr2] gives the list of mappings of \
+all sectors from MappedSectors[gr2] to UniqueSectors[gr2].\"\>"], "Print",
+ CellChangeTimes->{
+  3.9114578043270493`*^9, 3.911459218114592*^9, 3.911467219015892*^9, {
+   3.911471778170314*^9, 3.911471807657823*^9}, 3.911555133801708*^9, 
+   3.911555208585226*^9, 3.911555365417521*^9, 3.9117834803828573`*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"17f73b94-ee0f-4c0a-9e14-4fd4d777bcc6"],
+
+Cell[BoxData[
+ StyleBox["\<\"Solving sectors\[Ellipsis]\"\>",
+  StripOnInput->False,
+  FontWeight->Bold]], "Print",
+ CellChangeTimes->{
+  3.9114578043270493`*^9, 3.911459218114592*^9, 3.911467219015892*^9, {
+   3.911471778170314*^9, 3.911471807657823*^9}, 3.911555133801708*^9, 
+   3.911555208585226*^9, 3.911555365417521*^9, 3.9117834803843403`*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"c8ff459e-a211-4616-9e79-43f3a77b2558"],
+
+Cell[BoxData[
+ StyleBox["\<\"About to solve 12 unique sectors of gr2 basis.\"\>",
+  StripOnInput->False,
+  FontWeight->Bold]], "Print",
+ CellChangeTimes->{
+  3.9114578043270493`*^9, 3.911459218114592*^9, 3.911467219015892*^9, {
+   3.911471778170314*^9, 3.911471807657823*^9}, 3.911555133801708*^9, 
+   3.911555208585226*^9, 3.911555365417521*^9, 3.911783480385375*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"2f0a6b20-b089-4bd0-b974-8fa98047dd20"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Sector \"\>", "\[InvisibleSpace]", 
+   RowBox[{"js", "[", 
+    RowBox[{
+    "gr2", ",", "0", ",", "1", ",", "0", ",", "1", ",", "0", ",", "1", ",", 
+     "1", ",", "1", ",", "1", ",", "0", ",", "0"}], "]"}]}],
+  SequenceForm["Sector ", 
+   LiteRed`js[$CellContext`gr2, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9114578043270493`*^9, 3.911459218114592*^9, 3.911467219015892*^9, {
+   3.911471778170314*^9, 3.911471807657823*^9}, 3.911555133801708*^9, 
+   3.911555208585226*^9, 3.911555365417521*^9, 3.911783480386441*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"cb35da88-116b-4470-90a4-d046ae3e1472"],
+
+Cell[BoxData["\<\"    jRules[gr2, 0, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0] \
+\[LongDash] reduction rules for the sector.\\n    MIs[gr2] \[LongDash] list \
+of master integrals appended with 1 integrals (j[gr2, 0, 1, 0, 1, 0, 1, 1, 1, \
+1, 0, 0]).\"\>"], "Print",
+ CellChangeTimes->{
+  3.9114578043270493`*^9, 3.911459218114592*^9, 3.911467219015892*^9, {
+   3.911471778170314*^9, 3.911471807657823*^9}, 3.911555133801708*^9, 
+   3.911555208585226*^9, 3.911555365417521*^9, 3.911783503707898*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"891679d5-fbe5-4042-84c3-7420c31b9ea8"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Sector \"\>", "\[InvisibleSpace]", 
+   RowBox[{"js", "[", 
+    RowBox[{
+    "gr2", ",", "1", ",", "0", ",", "0", ",", "1", ",", "0", ",", "1", ",", 
+     "1", ",", "1", ",", "1", ",", "0", ",", "0"}], "]"}]}],
+  SequenceForm["Sector ", 
+   LiteRed`js[$CellContext`gr2, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9114578043270493`*^9, 3.911459218114592*^9, 3.911467219015892*^9, {
+   3.911471778170314*^9, 3.911471807657823*^9}, 3.911555133801708*^9, 
+   3.911555208585226*^9, 3.911555365417521*^9, 3.911783503734379*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"816ed9e3-03aa-49a6-81a6-4be6df7fee4e"],
+
+Cell[BoxData["\<\"    jRules[gr2, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 0] \
+\[LongDash] reduction rules for the sector.\\n    MIs[gr2] \[LongDash] list \
+of master integrals appended with 0 integrals.\"\>"], "Print",
+ CellChangeTimes->{
+  3.9114578043270493`*^9, 3.911459218114592*^9, 3.911467219015892*^9, {
+   3.911471778170314*^9, 3.911471807657823*^9}, 3.911555133801708*^9, 
+   3.911555208585226*^9, 3.911555365417521*^9, 3.9117835052013083`*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"62e99efb-25ad-45ba-9c45-5927894dc265"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Sector \"\>", "\[InvisibleSpace]", 
+   RowBox[{"js", "[", 
+    RowBox[{
+    "gr2", ",", "0", ",", "1", ",", "0", ",", "1", ",", "1", ",", "1", ",", 
+     "1", ",", "1", ",", "1", ",", "0", ",", "0"}], "]"}]}],
+  SequenceForm["Sector ", 
+   LiteRed`js[$CellContext`gr2, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9114578043270493`*^9, 3.911459218114592*^9, 3.911467219015892*^9, {
+   3.911471778170314*^9, 3.911471807657823*^9}, 3.911555133801708*^9, 
+   3.911555208585226*^9, 3.911555365417521*^9, 3.911783505205593*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"69b18a84-9bd1-4638-9e00-bbe45f7cc4ff"],
+
+Cell[BoxData["\<\"    jRules[gr2, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0] \
+\[LongDash] reduction rules for the sector.\\n    MIs[gr2] \[LongDash] list \
+of master integrals appended with 2 integrals (j[gr2, 0, 1, 0, 1, 1, 1, 1, 1, \
+1, 0, 0], j[gr2, 0, 2, 0, 1, 1, 1, 1, 1, 1, 0, 0]).\"\>"], "Print",
+ CellChangeTimes->{
+  3.9114578043270493`*^9, 3.911459218114592*^9, 3.911467219015892*^9, {
+   3.911471778170314*^9, 3.911471807657823*^9}, 3.911555133801708*^9, 
+   3.911555208585226*^9, 3.911555365417521*^9, 3.911783526074725*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"16a832ce-1b88-4f9d-b145-d72bf434c739"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Sector \"\>", "\[InvisibleSpace]", 
+   RowBox[{"js", "[", 
+    RowBox[{
+    "gr2", ",", "0", ",", "1", ",", "1", ",", "1", ",", "0", ",", "1", ",", 
+     "1", ",", "1", ",", "1", ",", "0", ",", "0"}], "]"}]}],
+  SequenceForm["Sector ", 
+   LiteRed`js[$CellContext`gr2, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9114578043270493`*^9, 3.911459218114592*^9, 3.911467219015892*^9, {
+   3.911471778170314*^9, 3.911471807657823*^9}, 3.911555133801708*^9, 
+   3.911555208585226*^9, 3.911555365417521*^9, 3.9117835261030684`*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"a0acaac5-3eee-4b8a-b109-ca8835adffa5"],
+
+Cell[BoxData["\<\"    jRules[gr2, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0] \
+\[LongDash] reduction rules for the sector.\\n    MIs[gr2] \[LongDash] list \
+of master integrals appended with 2 integrals (j[gr2, 0, 1, 1, 1, 0, 1, 1, 1, \
+1, 0, 0], j[gr2, 0, 2, 1, 1, 0, 1, 1, 1, 1, 0, 0]).\"\>"], "Print",
+ CellChangeTimes->{
+  3.9114578043270493`*^9, 3.911459218114592*^9, 3.911467219015892*^9, {
+   3.911471778170314*^9, 3.911471807657823*^9}, 3.911555133801708*^9, 
+   3.911555208585226*^9, 3.911555365417521*^9, 3.911783553535317*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"ab90672f-8034-49f9-a399-ac44700a1727"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Sector \"\>", "\[InvisibleSpace]", 
+   RowBox[{"js", "[", 
+    RowBox[{
+    "gr2", ",", "1", ",", "0", ",", "0", ",", "1", ",", "1", ",", "1", ",", 
+     "1", ",", "1", ",", "1", ",", "0", ",", "0"}], "]"}]}],
+  SequenceForm["Sector ", 
+   LiteRed`js[$CellContext`gr2, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9114578043270493`*^9, 3.911459218114592*^9, 3.911467219015892*^9, {
+   3.911471778170314*^9, 3.911471807657823*^9}, 3.911555133801708*^9, 
+   3.911555208585226*^9, 3.911555365417521*^9, 3.911783553564005*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"9743f4b3-dff3-4665-a059-4c0444381723"],
+
+Cell[BoxData["\<\"    jRules[gr2, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0] \
+\[LongDash] reduction rules for the sector.\\n    MIs[gr2] \[LongDash] list \
+of master integrals appended with 1 integrals (j[gr2, 1, 0, 0, 1, 1, 1, 1, 1, \
+1, 0, 0]).\"\>"], "Print",
+ CellChangeTimes->{
+  3.9114578043270493`*^9, 3.911459218114592*^9, 3.911467219015892*^9, {
+   3.911471778170314*^9, 3.911471807657823*^9}, 3.911555133801708*^9, 
+   3.911555208585226*^9, 3.911555365417521*^9, 3.911783565594372*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"c1b4af03-ece8-4e35-85fa-bd13da8baff5"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Sector \"\>", "\[InvisibleSpace]", 
+   RowBox[{"js", "[", 
+    RowBox[{
+    "gr2", ",", "1", ",", "0", ",", "1", ",", "1", ",", "0", ",", "1", ",", 
+     "1", ",", "1", ",", "1", ",", "0", ",", "0"}], "]"}]}],
+  SequenceForm["Sector ", 
+   LiteRed`js[$CellContext`gr2, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9114578043270493`*^9, 3.911459218114592*^9, 3.911467219015892*^9, {
+   3.911471778170314*^9, 3.911471807657823*^9}, 3.911555133801708*^9, 
+   3.911555208585226*^9, 3.911555365417521*^9, 3.911783565596127*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"31e89698-600f-4614-9edb-8cc551aadc5d"],
+
+Cell[BoxData["\<\"    jRules[gr2, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0] \
+\[LongDash] reduction rules for the sector.\\n    MIs[gr2] \[LongDash] list \
+of master integrals appended with 1 integrals (j[gr2, 1, 0, 1, 1, 0, 1, 1, 1, \
+1, 0, 0]).\"\>"], "Print",
+ CellChangeTimes->{
+  3.9114578043270493`*^9, 3.911459218114592*^9, 3.911467219015892*^9, {
+   3.911471778170314*^9, 3.911471807657823*^9}, 3.911555133801708*^9, 
+   3.911555208585226*^9, 3.911555365417521*^9, 3.91178358373285*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"f8d2de23-b5c9-4098-b123-213114adcffb"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Sector \"\>", "\[InvisibleSpace]", 
+   RowBox[{"js", "[", 
+    RowBox[{
+    "gr2", ",", "1", ",", "1", ",", "0", ",", "1", ",", "0", ",", "1", ",", 
+     "1", ",", "1", ",", "1", ",", "0", ",", "0"}], "]"}]}],
+  SequenceForm["Sector ", 
+   LiteRed`js[$CellContext`gr2, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9114578043270493`*^9, 3.911459218114592*^9, 3.911467219015892*^9, {
+   3.911471778170314*^9, 3.911471807657823*^9}, 3.911555133801708*^9, 
+   3.911555208585226*^9, 3.911555365417521*^9, 3.9117835837403727`*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"1620c8d0-b028-446a-821e-beb53afdb237"],
+
+Cell[BoxData["\<\"    jRules[gr2, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0] \
+\[LongDash] reduction rules for the sector.\\n    MIs[gr2] \[LongDash] list \
+of master integrals appended with 1 integrals (j[gr2, 1, 1, 0, 1, 0, 1, 1, 1, \
+1, 0, 0]).\"\>"], "Print",
+ CellChangeTimes->{
+  3.9114578043270493`*^9, 3.911459218114592*^9, 3.911467219015892*^9, {
+   3.911471778170314*^9, 3.911471807657823*^9}, 3.911555133801708*^9, 
+   3.911555208585226*^9, 3.911555365417521*^9, 3.911783601696642*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"1369cd85-93d4-485c-9537-bb378a81a330"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Sector \"\>", "\[InvisibleSpace]", 
+   RowBox[{"js", "[", 
+    RowBox[{
+    "gr2", ",", "0", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", 
+     "1", ",", "1", ",", "1", ",", "0", ",", "0"}], "]"}]}],
+  SequenceForm["Sector ", 
+   LiteRed`js[$CellContext`gr2, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9114578043270493`*^9, 3.911459218114592*^9, 3.911467219015892*^9, {
+   3.911471778170314*^9, 3.911471807657823*^9}, 3.911555133801708*^9, 
+   3.911555208585226*^9, 3.911555365417521*^9, 3.911783601723583*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"6ca97ac7-6245-41a7-b28d-3661b9ef1b53"],
+
+Cell[BoxData["\<\"    jRules[gr2, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0] \
+\[LongDash] reduction rules for the sector.\\n    MIs[gr2] \[LongDash] list \
+of master integrals appended with 0 integrals.\"\>"], "Print",
+ CellChangeTimes->{
+  3.9114578043270493`*^9, 3.911459218114592*^9, 3.911467219015892*^9, {
+   3.911471778170314*^9, 3.911471807657823*^9}, 3.911555133801708*^9, 
+   3.911555208585226*^9, 3.911555365417521*^9, 3.911783602205161*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"65dd3b78-8c55-470b-a921-4fe2e1e7a966"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Sector \"\>", "\[InvisibleSpace]", 
+   RowBox[{"js", "[", 
+    RowBox[{
+    "gr2", ",", "1", ",", "0", ",", "1", ",", "1", ",", "1", ",", "1", ",", 
+     "1", ",", "1", ",", "1", ",", "0", ",", "0"}], "]"}]}],
+  SequenceForm["Sector ", 
+   LiteRed`js[$CellContext`gr2, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9114578043270493`*^9, 3.911459218114592*^9, 3.911467219015892*^9, {
+   3.911471778170314*^9, 3.911471807657823*^9}, 3.911555133801708*^9, 
+   3.911555208585226*^9, 3.911555365417521*^9, 3.9117836022095633`*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"b17db8e4-e589-416d-9cc2-90d1f98101b2"],
+
+Cell[BoxData["\<\"    jRules[gr2, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0] \
+\[LongDash] reduction rules for the sector.\\n    MIs[gr2] \[LongDash] list \
+of master integrals appended with 1 integrals (j[gr2, 1, 0, 1, 1, 1, 1, 1, 1, \
+1, 0, 0]).\"\>"], "Print",
+ CellChangeTimes->{
+  3.9114578043270493`*^9, 3.911459218114592*^9, 3.911467219015892*^9, {
+   3.911471778170314*^9, 3.911471807657823*^9}, 3.911555133801708*^9, 
+   3.911555208585226*^9, 3.911555365417521*^9, 3.9117836559786654`*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"09c3b17d-a78b-41ae-9a52-16dfcdb15c31"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Sector \"\>", "\[InvisibleSpace]", 
+   RowBox[{"js", "[", 
+    RowBox[{
+    "gr2", ",", "1", ",", "1", ",", "0", ",", "1", ",", "1", ",", "1", ",", 
+     "1", ",", "1", ",", "1", ",", "0", ",", "0"}], "]"}]}],
+  SequenceForm["Sector ", 
+   LiteRed`js[$CellContext`gr2, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9114578043270493`*^9, 3.911459218114592*^9, 3.911467219015892*^9, {
+   3.911471778170314*^9, 3.911471807657823*^9}, 3.911555133801708*^9, 
+   3.911555208585226*^9, 3.911555365417521*^9, 3.9117836560063667`*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"52c72dd7-47ed-4a29-8fe6-8d12c5cfd295"],
+
+Cell[BoxData["\<\"    jRules[gr2, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0] \
+\[LongDash] reduction rules for the sector.\\n    MIs[gr2] \[LongDash] list \
+of master integrals appended with 1 integrals (j[gr2, 1, 1, 0, 1, 1, 1, 1, 1, \
+1, 0, 0]).\"\>"], "Print",
+ CellChangeTimes->{
+  3.9114578043270493`*^9, 3.911459218114592*^9, 3.911467219015892*^9, {
+   3.911471778170314*^9, 3.911471807657823*^9}, 3.911555133801708*^9, 
+   3.911555208585226*^9, 3.911555365417521*^9, 3.911783723290331*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"a1626213-22ff-4f4f-a180-13088da6e9cf"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Sector \"\>", "\[InvisibleSpace]", 
+   RowBox[{"js", "[", 
+    RowBox[{
+    "gr2", ",", "1", ",", "1", ",", "1", ",", "1", ",", "0", ",", "1", ",", 
+     "1", ",", "1", ",", "1", ",", "0", ",", "0"}], "]"}]}],
+  SequenceForm["Sector ", 
+   LiteRed`js[$CellContext`gr2, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9114578043270493`*^9, 3.911459218114592*^9, 3.911467219015892*^9, {
+   3.911471778170314*^9, 3.911471807657823*^9}, 3.911555133801708*^9, 
+   3.911555208585226*^9, 3.911555365417521*^9, 3.9117837233196383`*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"eda1ebe7-fac8-4f4e-a1dd-8eaefed205b3"],
+
+Cell[BoxData["\<\"    jRules[gr2, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0] \
+\[LongDash] reduction rules for the sector.\\n    MIs[gr2] \[LongDash] list \
+of master integrals appended with 1 integrals (j[gr2, 1, 1, 1, 1, 0, 1, 1, 1, \
+1, 0, 0]).\"\>"], "Print",
+ CellChangeTimes->{
+  3.9114578043270493`*^9, 3.911459218114592*^9, 3.911467219015892*^9, {
+   3.911471778170314*^9, 3.911471807657823*^9}, 3.911555133801708*^9, 
+   3.911555208585226*^9, 3.911555365417521*^9, 3.911783949160185*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"645b2846-26b1-4074-a7df-5ef580aa7dda"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Sector \"\>", "\[InvisibleSpace]", 
+   RowBox[{"js", "[", 
+    RowBox[{
+    "gr2", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", 
+     "1", ",", "1", ",", "1", ",", "0", ",", "0"}], "]"}]}],
+  SequenceForm["Sector ", 
+   LiteRed`js[$CellContext`gr2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0]],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.9114578043270493`*^9, 3.911459218114592*^9, 3.911467219015892*^9, {
+   3.911471778170314*^9, 3.911471807657823*^9}, 3.911555133801708*^9, 
+   3.911555208585226*^9, 3.911555365417521*^9, 3.911783949192625*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"2625ab6e-52cf-4228-81e5-3332e8fadbec"],
+
+Cell[BoxData["\<\"    jRules[gr2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0] \
+\[LongDash] reduction rules for the sector.\\n    MIs[gr2] \[LongDash] list \
+of master integrals appended with 1 integrals (j[gr2, 1, 1, 1, 1, 1, 1, 1, 1, \
+1, 0, 0]).\"\>"], "Print",
+ CellChangeTimes->{
+  3.9114578043270493`*^9, 3.911459218114592*^9, 3.911467219015892*^9, {
+   3.911471778170314*^9, 3.911471807657823*^9}, 3.911555133801708*^9, 
+   3.911555208585226*^9, 3.911555365417521*^9, 3.911784458553627*^9},
+ CellLabel->
+  "During evaluation of \
+In[19]:=",ExpressionUUID->"773e0e7d-64c9-439e-b175-cd898cb3b2c8"]
+}, Open  ]],
+
+Cell[BoxData["gr2"], "Output",
+ CellChangeTimes->{3.911457711415453*^9, 3.9114589892521267`*^9, 
+  3.911461244097742*^9, 3.91147118956903*^9, 3.9114717786612062`*^9, 
+  3.9114718358442163`*^9, 3.911555135047144*^9, 3.911555209568666*^9, 
+  3.9115885667078323`*^9, 3.91178445859479*^9},
+ CellLabel->"Out[19]=",ExpressionUUID->"3e12b061-8432-4709-9c9e-de23e7ec9ef8"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DiskSave", "[", "gr2", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.911784495516271*^9, 3.91178449612754*^9}},
+ CellLabel->"In[20]:=",ExpressionUUID->"2c132542-4c13-4c6d-8dfa-2ce8eb63cebb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Use IBPs", "Section",
+ CellChangeTimes->{{3.908753889191448*^9, 
+  3.908753894731037*^9}},ExpressionUUID->"16744408-455f-4da4-97a7-\
+e8114d418474"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "Get", "[", 
+   "\"\</Users/gangchen/Documents/GitHub/WaveformGROneLoop/radiOne/gr2\>\"", 
+   "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.9087526212667227`*^9, 3.9087526229636583`*^9}, 
+   3.909099804466214*^9, {3.915184063740346*^9, 3.915184063807838*^9}, 
+   3.915184267898654*^9},
+ CellLabel->"In[4]:=",ExpressionUUID->"b2138d56-cacc-4ea9-ae66-e54416fb6f0c"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "CheckDefinitions", "warn", 
+   "\"Some external definitions used in '\\!\\(\\*RowBox[{\\\"gr2\\\"}]\\)' \
+basis are missing. Probably, you should run \
+ExecuteDefinitions[\\!\\(\\*RowBox[{\\\"gr2\\\"}]\\)].\"", 2, 4, 2, 
+   33565360873856908407, "IBP1", "LiteRed`CheckDefinitions"},
+  "MessageTemplate2"]], "Message", "MSG",
+ CellChangeTimes->{3.91518406628363*^9, 3.915184234427142*^9, 
+  3.915184270025193*^9},
+ CellLabel->
+  "During evaluation of \
+In[4]:=",ExpressionUUID->"4dcf352c-8751-48ed-8bf5-a431f940f450"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"ExecuteDefinitions", "[", "gr2", "]"}]], "Input",
+ CellChangeTimes->{{3.9151842737717113`*^9, 3.9151842742426558`*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"16e62838-bbce-43fb-ba44-5fc20ca2e696"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MIs", "[", "gr2", "]"}]], "Input",
+ CellLabel->"In[7]:=",ExpressionUUID->"c91fa3ae-0487-418c-b482-7293acdc7c03"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"j", "[", 
+    RowBox[{
+    "gr2", ",", "0", ",", "1", ",", "0", ",", "1", ",", "0", ",", "1", ",", 
+     "1", ",", "1", ",", "1", ",", "0", ",", "0"}], "]"}], ",", 
+   RowBox[{"j", "[", 
+    RowBox[{
+    "gr2", ",", "0", ",", "1", ",", "0", ",", "1", ",", "1", ",", "1", ",", 
+     "1", ",", "1", ",", "1", ",", "0", ",", "0"}], "]"}], ",", 
+   RowBox[{"j", "[", 
+    RowBox[{
+    "gr2", ",", "0", ",", "2", ",", "0", ",", "1", ",", "1", ",", "1", ",", 
+     "1", ",", "1", ",", "1", ",", "0", ",", "0"}], "]"}], ",", 
+   RowBox[{"j", "[", 
+    RowBox[{
+    "gr2", ",", "0", ",", "1", ",", "1", ",", "1", ",", "0", ",", "1", ",", 
+     "1", ",", "1", ",", "1", ",", "0", ",", "0"}], "]"}], ",", 
+   RowBox[{"j", "[", 
+    RowBox[{
+    "gr2", ",", "0", ",", "2", ",", "1", ",", "1", ",", "0", ",", "1", ",", 
+     "1", ",", "1", ",", "1", ",", "0", ",", "0"}], "]"}], ",", 
+   RowBox[{"j", "[", 
+    RowBox[{
+    "gr2", ",", "1", ",", "0", ",", "0", ",", "1", ",", "1", ",", "1", ",", 
+     "1", ",", "1", ",", "1", ",", "0", ",", "0"}], "]"}], ",", 
+   RowBox[{"j", "[", 
+    RowBox[{
+    "gr2", ",", "1", ",", "0", ",", "1", ",", "1", ",", "0", ",", "1", ",", 
+     "1", ",", "1", ",", "1", ",", "0", ",", "0"}], "]"}], ",", 
+   RowBox[{"j", "[", 
+    RowBox[{
+    "gr2", ",", "1", ",", "1", ",", "0", ",", "1", ",", "0", ",", "1", ",", 
+     "1", ",", "1", ",", "1", ",", "0", ",", "0"}], "]"}], ",", 
+   RowBox[{"j", "[", 
+    RowBox[{
+    "gr2", ",", "1", ",", "0", ",", "1", ",", "1", ",", "1", ",", "1", ",", 
+     "1", ",", "1", ",", "1", ",", "0", ",", "0"}], "]"}], ",", 
+   RowBox[{"j", "[", 
+    RowBox[{
+    "gr2", ",", "1", ",", "1", ",", "0", ",", "1", ",", "1", ",", "1", ",", 
+     "1", ",", "1", ",", "1", ",", "0", ",", "0"}], "]"}], ",", 
+   RowBox[{"j", "[", 
+    RowBox[{
+    "gr2", ",", "1", ",", "1", ",", "1", ",", "1", ",", "0", ",", "1", ",", 
+     "1", ",", "1", ",", "1", ",", "0", ",", "0"}], "]"}], ",", 
+   RowBox[{"j", "[", 
+    RowBox[{
+    "gr2", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", 
+     "1", ",", "1", ",", "1", ",", "0", ",", "0"}], "]"}]}], "}"}]], "Output",\
+
+ CellChangeTimes->{3.915184293924923*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"47bce9f4-40c4-444a-b7e1-58289adf8071"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"j", "[", 
+   RowBox[{"gr2", ",", 
+    RowBox[{"-", "1"}], ",", 
+    RowBox[{"-", "2"}], ",", "1", ",", "1", ",", 
+    RowBox[{"-", "1"}], ",", "1", ",", "1", ",", "1", ",", "1", ",", "0", ",",
+     "0"}], "]"}], "//", "IBPReduce"}]], "Input",
+ CellChangeTimes->{{3.915189010006546*^9, 3.915189026151783*^9}},
+ CellLabel->"In[29]:=",ExpressionUUID->"0ee3f8e2-8f45-4b5d-a0fc-16bcc65306fc"],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{3.915189028839302*^9},
+ CellLabel->"Out[29]=",ExpressionUUID->"ec32d5c9-ffd4-4b14-bbd5-e2d7873b3404"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"j", "[", 
+   RowBox[{"gr2", ",", "1", ",", 
+    RowBox[{"-", "2"}], ",", "1", ",", "1", ",", 
+    RowBox[{"-", "1"}], ",", "1", ",", "1", ",", "1", ",", "1", ",", "0", ",",
+     "0"}], "]"}], "//", "IBPReduce"}]], "Input",
+ CellChangeTimes->{{3.91518432314086*^9, 3.915184367757156*^9}, {
+  3.915184409861041*^9, 3.915184475889373*^9}},
+ CellLabel->"In[27]:=",ExpressionUUID->"273c0f59-9654-4135-aed7-c937f2fd81ad"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"-", "2"}], "+", "d"}], ")"}], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "1"}], "+", "y"}], ")"}], "2"], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{"1", "+", "y"}], ")"}], "2"]}]], 
+  RowBox[{"u", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "2"}], " ", 
+      SuperscriptBox["bb", "2"]}], "+", 
+     RowBox[{
+      SuperscriptBox["bb", "2"], " ", "d"}], "+", 
+     RowBox[{"4", " ", "bb", " ", "u"}], "-", 
+     RowBox[{"2", " ", "bb", " ", "d", " ", "u"}], "-", 
+     RowBox[{"2", " ", 
+      SuperscriptBox["u", "2"]}], "+", 
+     RowBox[{"d", " ", 
+      SuperscriptBox["u", "2"]}], "+", 
+     RowBox[{"4", " ", "bb", " ", "d", " ", 
+      SuperscriptBox["w1", "2"]}], "-", 
+     RowBox[{"4", " ", "d", " ", "u", " ", 
+      SuperscriptBox["w1", "2"]}], "+", 
+     RowBox[{"4", " ", 
+      SuperscriptBox["w1", "4"]}], "+", 
+     RowBox[{"4", " ", "d", " ", 
+      SuperscriptBox["w1", "4"]}], "+", 
+     RowBox[{"4", " ", 
+      SuperscriptBox["bb", "2"], " ", 
+      SuperscriptBox["y", "2"]}], "-", 
+     RowBox[{"2", " ", 
+      SuperscriptBox["bb", "2"], " ", "d", " ", 
+      SuperscriptBox["y", "2"]}], "-", 
+     RowBox[{"8", " ", "bb", " ", "u", " ", 
+      SuperscriptBox["y", "2"]}], "+", 
+     RowBox[{"4", " ", "bb", " ", "d", " ", "u", " ", 
+      SuperscriptBox["y", "2"]}], "+", 
+     RowBox[{"4", " ", 
+      SuperscriptBox["u", "2"], " ", 
+      SuperscriptBox["y", "2"]}], "-", 
+     RowBox[{"2", " ", "d", " ", 
+      SuperscriptBox["u", "2"], " ", 
+      SuperscriptBox["y", "2"]}], "-", 
+     RowBox[{"4", " ", "bb", " ", "d", " ", 
+      SuperscriptBox["w1", "2"], " ", 
+      SuperscriptBox["y", "2"]}], "+", 
+     RowBox[{"4", " ", "d", " ", "u", " ", 
+      SuperscriptBox["w1", "2"], " ", 
+      SuperscriptBox["y", "2"]}], "-", 
+     RowBox[{"2", " ", 
+      SuperscriptBox["bb", "2"], " ", 
+      SuperscriptBox["y", "4"]}], "+", 
+     RowBox[{
+      SuperscriptBox["bb", "2"], " ", "d", " ", 
+      SuperscriptBox["y", "4"]}], "+", 
+     RowBox[{"4", " ", "bb", " ", "u", " ", 
+      SuperscriptBox["y", "4"]}], "-", 
+     RowBox[{"2", " ", "bb", " ", "d", " ", "u", " ", 
+      SuperscriptBox["y", "4"]}], "-", 
+     RowBox[{"2", " ", 
+      SuperscriptBox["u", "2"], " ", 
+      SuperscriptBox["y", "4"]}], "+", 
+     RowBox[{"d", " ", 
+      SuperscriptBox["u", "2"], " ", 
+      SuperscriptBox["y", "4"]}]}], ")"}], " ", 
+   RowBox[{"j", "[", 
+    RowBox[{
+    "gr2", ",", "1", ",", "0", ",", "1", ",", "1", ",", "0", ",", "1", ",", 
+     "1", ",", "1", ",", "1", ",", "0", ",", "0"}], "]"}]}]}]], "Output",
+ CellChangeTimes->{{3.9151843172825108`*^9, 3.915184368933845*^9}, {
+  3.91518441055849*^9, 3.915184476804593*^9}},
+ CellLabel->"Out[27]=",ExpressionUUID->"325d3918-9561-431b-a31b-2faddaecf4ae"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Ds", "[", "gr2", "]"}]], "Input",
+ CellChangeTimes->{{3.915188969053742*^9, 3.9151889756083183`*^9}},
+ CellLabel->"In[28]:=",ExpressionUUID->"d91eec7e-4974-4ac3-a6c4-10461ec77a77"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"bb", "-", "u", "+", 
+    RowBox[{"q1", "\[CenterDot]", "q1"}]}], ",", 
+   RowBox[{"l1", "\[CenterDot]", "l1"}], ",", 
+   RowBox[{"l1", "\[CenterDot]", "v2"}], ",", 
+   RowBox[{
+    RowBox[{"l1", "\[CenterDot]", "l1"}], "+", 
+    RowBox[{"2", " ", 
+     RowBox[{"l1", "\[CenterDot]", "q1"}]}], "+", 
+    RowBox[{"q1", "\[CenterDot]", "q1"}]}], ",", 
+   RowBox[{"b1", "\[CenterDot]", "l1"}], ",", 
+   RowBox[{"l1", "\[CenterDot]", "v1"}], ",", 
+   RowBox[{"q1", "\[CenterDot]", "v1"}], ",", 
+   RowBox[{"w1", "+", 
+    RowBox[{"q1", "\[CenterDot]", "v2"}]}], ",", 
+   RowBox[{"u", "+", 
+    RowBox[{"b1", "\[CenterDot]", "q1"}]}], ",", 
+   RowBox[{"l1", "\[CenterDot]", "v0"}], ",", 
+   RowBox[{"q1", "\[CenterDot]", "v0"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.9151889761985893`*^9},
+ CellLabel->"Out[28]=",ExpressionUUID->"5fee4604-d3f3-456e-b924-45bf08666310"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"j", "[", 
+   RowBox[{"gr1", ",", "1", ",", "1", ",", "1", ",", "1", ",", 
+    RowBox[{"-", "1"}]}], "]"}], "//", "IBPReduce"}]], "Input",
+ CellChangeTimes->{{3.908753920268633*^9, 3.908753930997261*^9}, {
+  3.908754333214591*^9, 3.908754367102209*^9}},
+ CellLabel->"In[88]:=",ExpressionUUID->"76ebece4-7e99-4c1c-9690-ac8a680176a6"],
+
+Cell[BoxData["0"], "Output",
+ CellChangeTimes->{
+  3.908752764942306*^9, 3.90875284548917*^9, 3.908752885505259*^9, 
+   3.908752968895295*^9, {3.908753909999641*^9, 3.908753931949882*^9}, {
+   3.9087543304221087`*^9, 3.908754367733014*^9}, 3.909099825397985*^9, 
+   3.9092041268933687`*^9},
+ CellLabel->"Out[88]=",ExpressionUUID->"c46ab15c-2d4b-40c3-96f6-797b50e58a6c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SetDirectory", "[", 
+  RowBox[{"NotebookDirectory", "[", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.9087563628784*^9, 3.908756384772152*^9}},
+ CellLabel->"In[89]:=",ExpressionUUID->"7ea65a41-a0fa-4bf8-b1bb-32d9d84d70cb"],
+
+Cell[BoxData["\<\"/Users/gangchen/Documents/GitHub/ClassicalSpinOneLoop/CG\"\>\
+"], "Output",
+ CellChangeTimes->{3.9087563854132767`*^9, 3.909204131525058*^9},
+ CellLabel->"Out[89]=",ExpressionUUID->"ea2aa829-f1db-4a7c-b274-b0bb791abfdd"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"int", "=", 
+   RowBox[{
+    RowBox[{"Import", "[", "\"\<oneloopDownTriangleIBPForm.txt\>\"", "]"}], "//",
+     "ToExpression"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.9090997487768087`*^9, 3.909099769462288*^9}, {
+  3.909099845019455*^9, 3.909099850226198*^9}},
+ CellLabel->"In[90]:=",ExpressionUUID->"0ac2468b-4f56-4aa5-96bb-91145168944b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["int"], "Input",
+ CellLabel->"In[91]:=",ExpressionUUID->"16cf6f7f-aa8b-4865-a310-8abdfc5eaf8c"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   FrameBox[GridBox[{
+      {
+       ItemBox[
+        TagBox[
+         RowBox[{
+          TemplateBox[{"35702"},
+           "OutputSizeLimit`Skeleton"], "+", 
+          FractionBox[
+           TemplateBox[{"1"},
+            "OutputSizeLimit`Skeleton"], 
+           TemplateBox[{"1"},
+            "OutputSizeLimit`Skeleton"]], "-", 
+          FractionBox[
+           RowBox[{"\[ImaginaryI]", " ", 
+            SuperscriptBox["y", "3"], " ", 
+            RowBox[{"dot", "[", 
+             RowBox[{
+              RowBox[{"a", "[", "1", "]"}], ",", 
+              RowBox[{"v", "[", "0", "]"}]}], "]"}], " ", 
+            SuperscriptBox[
+             RowBox[{"dot", "[", 
+              TemplateBox[{"1"},
+               "OutputSizeLimit`Skeleton"], "]"}], "2"], " ", 
+            SuperscriptBox[
+             TemplateBox[{"1"},
+              "OutputSizeLimit`Skeleton"], "2"], " ", 
+            SuperscriptBox[
+             TemplateBox[{"1"},
+              "OutputSizeLimit`Skeleton"], "2"], " ", 
+            RowBox[{"j", "[", 
+             RowBox[{"gr1", ",", "2", ",", "0"}], "]"}], " ", 
+            SuperscriptBox[
+             RowBox[{"m", "[", "1", "]"}], "2"], " ", 
+            SuperscriptBox[
+             RowBox[{"m", "[", "2", "]"}], "4"]}], 
+           RowBox[{"64", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "1"}], "+", 
+              SuperscriptBox["y", "2"]}], ")"}]}]]}],
+         Short[#, 5]& ],
+        BaseStyle->{Deployed -> False},
+        StripOnInput->False]},
+      {GridBox[{
+         {
+          PaneBox[
+           TagBox[
+            TooltipBox[
+             StyleBox[
+              StyleBox[
+               DynamicBox[ToBoxes[
+                 FEPrivate`FrontEndResource[
+                 "FEStrings", "sizeBriefExplanation"], StandardForm],
+                ImageSizeCache->{70., {3., 10.}}],
+               StripOnInput->False,
+               DynamicUpdating->True,
+               LineSpacing->{1, 2},
+               LineIndent->0,
+               LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLText",
+              StripOnInput->False],
+             StyleBox[
+              DynamicBox[
+               ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeExplanation"], 
+                StandardForm]], DynamicUpdating -> True, LineIndent -> 0, 
+              LinebreakAdjustments -> {1., 100, 0, 0, 0}, 
+              LineSpacing -> {1, 2}, StripOnInput -> False]],
+            Annotation[#, 
+             Style[
+              Dynamic[
+               FEPrivate`FrontEndResource["FEStrings", "sizeExplanation"]], 
+              DynamicUpdating -> True, LineIndent -> 0, 
+              LinebreakAdjustments -> {1., 100, 0, 0, 0}, 
+              LineSpacing -> {1, 2}], "Tooltip"]& ],
+           Alignment->Center,
+           BaselinePosition->Baseline,
+           ImageSize->{Automatic, {25, Full}}], 
+          ButtonBox[
+           PaneSelectorBox[{False->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowLess"], 
+                StandardForm],
+               ImageSizeCache->{61., {0., 10.}}],
+              StripOnInput->False,
+              DynamicUpdating->True,
+              LineSpacing->{1, 2},
+              LineIndent->0,
+              LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLControl",
+             StripOnInput->False], True->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowLess"], 
+                StandardForm]],
+              StripOnInput->False,
+              DynamicUpdating->True,
+              LineSpacing->{1, 2},
+              LineIndent->0,
+              LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLControlActive",
+             StripOnInput->False]}, Dynamic[
+             CurrentValue["MouseOver"]],
+            Alignment->Center,
+            FrameMargins->0,
+            ImageSize->{Automatic, {25, Full}}],
+           Appearance->None,
+           BaselinePosition->Baseline,
+           
+           ButtonFunction:>OutputSizeLimit`ButtonFunction[
+            OutputSizeLimit`Defer, 91, 33525484800119949414, 5/2],
+           Enabled->True,
+           Evaluator->Automatic,
+           Method->"Queued"], 
+          ButtonBox[
+           PaneSelectorBox[{False->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowMore"], 
+                StandardForm],
+               ImageSizeCache->{68., {0., 10.}}],
+              StripOnInput->False,
+              DynamicUpdating->True,
+              LineSpacing->{1, 2},
+              LineIndent->0,
+              LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLControl",
+             StripOnInput->False], True->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowMore"], 
+                StandardForm]],
+              StripOnInput->False,
+              DynamicUpdating->True,
+              LineSpacing->{1, 2},
+              LineIndent->0,
+              LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLControlActive",
+             StripOnInput->False]}, Dynamic[
+             CurrentValue["MouseOver"]],
+            Alignment->Center,
+            FrameMargins->0,
+            ImageSize->{Automatic, {25, Full}}],
+           Appearance->None,
+           BaselinePosition->Baseline,
+           
+           ButtonFunction:>OutputSizeLimit`ButtonFunction[
+            OutputSizeLimit`Defer, 91, 33525484800119949414, 5 2],
+           Enabled->True,
+           Evaluator->Automatic,
+           Method->"Queued"], 
+          ButtonBox[
+           PaneSelectorBox[{False->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowAll"], 
+                StandardForm],
+               ImageSizeCache->{51., {0., 10.}}],
+              StripOnInput->False,
+              DynamicUpdating->True,
+              LineSpacing->{1, 2},
+              LineIndent->0,
+              LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLControl",
+             StripOnInput->False], True->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowAll"], 
+                StandardForm]],
+              StripOnInput->False,
+              DynamicUpdating->True,
+              LineSpacing->{1, 2},
+              LineIndent->0,
+              LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLControlActive",
+             StripOnInput->False]}, Dynamic[
+             CurrentValue["MouseOver"]],
+            Alignment->Center,
+            FrameMargins->0,
+            ImageSize->{Automatic, {25, Full}}],
+           Appearance->None,
+           BaselinePosition->Baseline,
+           
+           ButtonFunction:>OutputSizeLimit`ButtonFunction[
+            OutputSizeLimit`Defer, 91, 33525484800119949414, Infinity],
+           Enabled->True,
+           Evaluator->Automatic,
+           Method->"Queued"], 
+          ButtonBox[
+           PaneSelectorBox[{False->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeChangeLimit"], 
+                StandardForm],
+               ImageSizeCache->{91., {1., 10.}}],
+              StripOnInput->False,
+              DynamicUpdating->True,
+              LineSpacing->{1, 2},
+              LineIndent->0,
+              LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLControl",
+             StripOnInput->False], True->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeChangeLimit"], 
+                StandardForm]],
+              StripOnInput->False,
+              DynamicUpdating->True,
+              LineSpacing->{1, 2},
+              LineIndent->0,
+              LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLControlActive",
+             StripOnInput->False]}, Dynamic[
+             CurrentValue["MouseOver"]],
+            Alignment->Center,
+            FrameMargins->0,
+            ImageSize->{Automatic, {25, Full}}],
+           Appearance->None,
+           BaselinePosition->Baseline,
+           ButtonFunction:>FrontEndExecute[{
+              FrontEnd`SetOptions[
+              FrontEnd`$FrontEnd, 
+               FrontEnd`PreferencesSettings -> {"Page" -> "Advanced"}], 
+              FrontEnd`FrontEndToken["PreferencesDialog"]}],
+           Evaluator->None,
+           Method->"Preemptive"]}
+        },
+        AutoDelete->False,
+        FrameStyle->GrayLevel[0.85],
+        GridBoxDividers->{"Columns" -> {False, {True}}},
+        GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+        GridBoxSpacings->{"Columns" -> {{2}}}]}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+     GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{1.}}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.5599999999999999]}, 
+         Offset[0.27999999999999997`]}, "Rows" -> {
+         Offset[0.2], 
+         Offset[1.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}}],
+    BaseStyle->"OutputSizeLimit",
+    FrameMargins->{{12, 12}, {0, 15}},
+    FrameStyle->GrayLevel[0.85],
+    RoundingRadius->5,
+    StripOnInput->False],
+   Deploy,
+   DefaultBaseStyle->"Deploy"],
+  If[33525484800119949414 === $SessionID, 
+   Out[91], Message[
+     MessageName[Syntax, "noinfoker"]]; Missing["NotAvailable"]; 
+   Null]]], "Output",
+ CellChangeTimes->{3.909204142803892*^9},
+ CellLabel->"Out[91]=",ExpressionUUID->"9c684883-def1-4f38-a3d1-2b81d647f1f0"]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{"ClearAll", "[", "CollectjSim", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"CollectjSim", ":=", 
+  RowBox[{
+   RowBox[{"Collect", "[", 
+    RowBox[{"#", ",", 
+     RowBox[{"j", "[", "__", "]"}]}], "]"}], "&"}]}]}], "Input",
+ CellChangeTimes->{{3.90911358770654*^9, 3.9091135878538923`*^9}},
+ CellLabel->"In[72]:=",ExpressionUUID->"65cbfa55-96a3-4f50-8961-859eccb41a79"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"int", "=", 
+   RowBox[{
+    RowBox[{"int", "/.", 
+     RowBox[{
+      RowBox[{"j", "[", 
+       RowBox[{"a_", ",", "b__"}], "]"}], ":>", 
+      RowBox[{"j", "[", 
+       RowBox[{"a", ",", "1", ",", "1", ",", "1", ",", "b"}], "]"}]}]}], "//",
+     "CollectjSim"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.909099860018828*^9, 3.9090998913073483`*^9}, 
+   3.909099934765604*^9, 3.909113596801939*^9},
+ CellLabel->"In[74]:=",ExpressionUUID->"8541e5f1-4bda-4a55-b04f-a42d68a5c1dc"],
+
+Cell[BoxData[
+ RowBox[{"Monitor", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"intReduced", "=", 
+     RowBox[{"Sum", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"int", "[", 
+         RowBox[{"[", "ii", "]"}], "]"}], "//", "IBPReduce"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"ii", ",", 
+         RowBox[{"Length", "@", "int"}]}], "}"}]}], "]"}]}], ";"}], ",", 
+   "ii"}], "]"}]], "Input",
+ CellChangeTimes->{{3.909099954343666*^9, 3.9090999572100887`*^9}, {
+  3.909099996440919*^9, 3.909100001577667*^9}, {3.909113713892651*^9, 
+  3.909113735442904*^9}},
+ CellLabel->"In[82]:=",ExpressionUUID->"ecbd516c-cd81-4303-b526-0d3026a4747f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"int", "//", "Length"}]], "Input",
+ CellChangeTimes->{{3.909113695893936*^9, 3.909113710752205*^9}},
+ CellLabel->"In[81]:=",ExpressionUUID->"cea333a1-848e-491b-a0f8-c56131dfc43f"],
+
+Cell[BoxData["39"], "Output",
+ CellChangeTimes->{{3.909113696823765*^9, 3.9091137112153788`*^9}},
+ CellLabel->"Out[81]=",ExpressionUUID->"c9e77f35-baaf-4ff0-a375-6abbc8548a01"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"intReducedSim", "=", 
+   RowBox[{
+    RowBox[{"intReduced", "/.", 
+     RowBox[{"dim", "->", "d"}]}], "//", "Expand"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.909100063475827*^9, 3.909100112940155*^9}, 
+   3.9091001436583147`*^9, {3.909100195252487*^9, 3.909100216178987*^9}},
+ CellLabel->"In[83]:=",ExpressionUUID->"7ca5415d-7320-4057-9589-0a4403e8a1f8"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"intReducedSim", ">>", "\"\<ReducedOneloop.txt\>\""}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.9091135430801153`*^9, 3.909113556061487*^9}},
+ CellLabel->"In[85]:=",ExpressionUUID->"0aa67f15-4f76-4c9e-b893-e31fe4b1541a"]
+}, Open  ]]
+},
+Evaluator->"IBP1",
+WindowSize->{1112, 796},
+WindowMargins->{{16, Automatic}, {Automatic, 16}},
+TaggingRules->Association["TryRealOnly" -> False],
+Magnification:>1.25 Inherited,
+FrontEndVersion->"12.3 for Mac OS X x86 (64-bit) (June 19, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"da9bd95a-c16a-40a5-af0d-25349ef806c7"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 451, 8, 64, "Input",ExpressionUUID->"2b6699d2-cbac-492b-b904-18fb35640ea4"],
+Cell[1034, 32, 1836, 26, 42, "Output",ExpressionUUID->"1badbbdc-feff-4168-81fd-27a308faffd4"],
+Cell[2873, 60, 4653, 139, 294, "Print",ExpressionUUID->"adbcf2c8-5014-45ca-bd5c-90ffb44b8913"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7563, 204, 130, 2, 37, "Input",ExpressionUUID->"3c249571-9c49-45db-988e-755c1f6348cb"],
+Cell[7696, 208, 77560, 1844, 1711, "Output",ExpressionUUID->"352328fc-203d-4faf-a254-943e523f5373"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[85293, 2057, 231, 4, 65, "Section",ExpressionUUID->"ffbf3c0a-bd66-4da1-a0b7-fdfa2ad8b713"],
+Cell[CellGroupData[{
+Cell[85549, 2065, 449, 7, 37, "Input",ExpressionUUID->"df8ec0ca-c674-4bc3-ba8d-a93ed31e1233"],
+Cell[86001, 2074, 1502, 22, 42, "Output",ExpressionUUID->"5805e73a-e811-40e9-8f69-94449425768e"]
+}, Open  ]],
+Cell[87518, 2099, 1210, 25, 116, "Input",ExpressionUUID->"e6e824d7-c2e1-4089-b2b2-b38cb4d1adb4"],
+Cell[CellGroupData[{
+Cell[88753, 2128, 3251, 73, 350, "Input",ExpressionUUID->"4ddcc5b7-56da-4e24-9e21-91b2411c1ec9"],
+Cell[92007, 2203, 495, 9, 29, "Print",ExpressionUUID->"9fda7bac-5cfa-4649-9c0f-ffde676eedaa"]
+}, Open  ]],
+Cell[92517, 2215, 3687, 87, 116, "Input",ExpressionUUID->"eb7c7b30-ecf4-4f04-a13f-e83746c54d68"],
+Cell[CellGroupData[{
+Cell[96229, 2306, 352, 8, 37, "Input",ExpressionUUID->"ca571e8e-dbd9-43ba-ad0c-3c29bdd30d71"],
+Cell[96584, 2316, 1366, 29, 69, "Output",ExpressionUUID->"d8f18663-2cc4-4cc4-bab4-dd06fdaa39af"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[97987, 2350, 204, 3, 37, "Input",ExpressionUUID->"b8fc74c8-849c-481c-8c39-1a4238f3a973"],
+Cell[98194, 2355, 292, 4, 42, "Output",ExpressionUUID->"8ab7c5ee-1042-4205-8269-b9b332482237"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[98523, 2364, 1340, 25, 64, "Input",ExpressionUUID->"545273ad-7e37-4311-8968-023f4b794f14"],
+Cell[CellGroupData[{
+Cell[99888, 2393, 889, 14, 198, "Print",ExpressionUUID->"68df0a62-f459-4ab3-9f4f-202018fcad08"],
+Cell[100780, 2409, 411, 7, 29, "Print",ExpressionUUID->"7bfc26f0-c9fe-4948-87ec-b5eb7e9500f8"],
+Cell[101194, 2418, 454, 10, 29, "Print",ExpressionUUID->"a620dbb2-7057-4780-8b02-cf14029dc2ae"],
+Cell[101651, 2430, 519, 9, 78, "Print",ExpressionUUID->"c000e323-9380-48e3-aa5d-b30b8d2797c1"],
+Cell[102173, 2441, 455, 10, 29, "Print",ExpressionUUID->"224bde25-3203-4f57-b0a8-a1a6e1ac3608"],
+Cell[102631, 2453, 855, 13, 174, "Print",ExpressionUUID->"d1680507-552e-42ff-bcb4-7f3859c5a0b6"],
+Cell[103489, 2468, 456, 10, 29, "Print",ExpressionUUID->"cfdf44a2-32e7-400d-981e-bcba8b2aa257"],
+Cell[103948, 2480, 989, 15, 198, "Print",ExpressionUUID->"17f73b94-ee0f-4c0a-9e14-4fd4d777bcc6"],
+Cell[104940, 2497, 455, 10, 29, "Print",ExpressionUUID->"c8ff459e-a211-4616-9e79-43f3a77b2558"],
+Cell[105398, 2509, 473, 10, 29, "Print",ExpressionUUID->"2f0a6b20-b089-4bd0-b974-8fa98047dd20"],
+Cell[105874, 2521, 720, 16, 29, "Print",ExpressionUUID->"cb35da88-116b-4470-90a4-d046ae3e1472"],
+Cell[106597, 2539, 591, 10, 78, "Print",ExpressionUUID->"891679d5-fbe5-4042-84c3-7420c31b9ea8"],
+Cell[107191, 2551, 720, 16, 29, "Print",ExpressionUUID->"816ed9e3-03aa-49a6-81a6-4be6df7fee4e"],
+Cell[107914, 2569, 549, 9, 54, "Print",ExpressionUUID->"62e99efb-25ad-45ba-9c45-5927894dc265"],
+Cell[108466, 2580, 720, 16, 29, "Print",ExpressionUUID->"69b18a84-9bd1-4638-9e00-bbe45f7cc4ff"],
+Cell[109189, 2598, 632, 10, 78, "Print",ExpressionUUID->"16a832ce-1b88-4f9d-b145-d72bf434c739"],
+Cell[109824, 2610, 722, 16, 29, "Print",ExpressionUUID->"a0acaac5-3eee-4b8a-b109-ca8835adffa5"],
+Cell[110549, 2628, 632, 10, 78, "Print",ExpressionUUID->"ab90672f-8034-49f9-a399-ac44700a1727"],
+Cell[111184, 2640, 720, 16, 29, "Print",ExpressionUUID->"9743f4b3-dff3-4665-a059-4c0444381723"],
+Cell[111907, 2658, 591, 10, 78, "Print",ExpressionUUID->"c1b4af03-ece8-4e35-85fa-bd13da8baff5"],
+Cell[112501, 2670, 720, 16, 29, "Print",ExpressionUUID->"31e89698-600f-4614-9edb-8cc551aadc5d"],
+Cell[113224, 2688, 590, 10, 78, "Print",ExpressionUUID->"f8d2de23-b5c9-4098-b123-213114adcffb"],
+Cell[113817, 2700, 722, 16, 29, "Print",ExpressionUUID->"1620c8d0-b028-446a-821e-beb53afdb237"],
+Cell[114542, 2718, 591, 10, 78, "Print",ExpressionUUID->"1369cd85-93d4-485c-9537-bb378a81a330"],
+Cell[115136, 2730, 720, 16, 29, "Print",ExpressionUUID->"6ca97ac7-6245-41a7-b28d-3661b9ef1b53"],
+Cell[115859, 2748, 547, 9, 54, "Print",ExpressionUUID->"65dd3b78-8c55-470b-a921-4fe2e1e7a966"],
+Cell[116409, 2759, 722, 16, 29, "Print",ExpressionUUID->"b17db8e4-e589-416d-9cc2-90d1f98101b2"],
+Cell[117134, 2777, 593, 10, 78, "Print",ExpressionUUID->"09c3b17d-a78b-41ae-9a52-16dfcdb15c31"],
+Cell[117730, 2789, 722, 16, 29, "Print",ExpressionUUID->"52c72dd7-47ed-4a29-8fe6-8d12c5cfd295"],
+Cell[118455, 2807, 591, 10, 78, "Print",ExpressionUUID->"a1626213-22ff-4f4f-a180-13088da6e9cf"],
+Cell[119049, 2819, 722, 16, 29, "Print",ExpressionUUID->"eda1ebe7-fac8-4f4e-a1dd-8eaefed205b3"],
+Cell[119774, 2837, 591, 10, 78, "Print",ExpressionUUID->"645b2846-26b1-4074-a7df-5ef580aa7dda"],
+Cell[120368, 2849, 720, 16, 29, "Print",ExpressionUUID->"2625ab6e-52cf-4228-81e5-3332e8fadbec"],
+Cell[121091, 2867, 591, 10, 78, "Print",ExpressionUUID->"773e0e7d-64c9-439e-b175-cd898cb3b2c8"]
+}, Open  ]],
+Cell[121697, 2880, 364, 5, 42, "Output",ExpressionUUID->"3e12b061-8432-4709-9c9e-de23e7ec9ef8"]
+}, Open  ]],
+Cell[122076, 2888, 225, 4, 37, "Input",ExpressionUUID->"2c132542-4c13-4c6d-8dfa-2ce8eb63cebb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[122338, 2897, 153, 3, 84, "Section",ExpressionUUID->"16744408-455f-4da4-97a7-e8114d418474"],
+Cell[CellGroupData[{
+Cell[122516, 2904, 400, 9, 37, "Input",ExpressionUUID->"b2138d56-cacc-4ea9-ae66-e54416fb6f0c"],
+Cell[122919, 2915, 548, 12, 35, "Message",ExpressionUUID->"4dcf352c-8751-48ed-8bf5-a431f940f450"]
+}, Open  ]],
+Cell[123482, 2930, 221, 3, 37, "Input",ExpressionUUID->"16e62838-bbce-43fb-ba44-5fc20ca2e696"],
+Cell[CellGroupData[{
+Cell[123728, 2937, 136, 2, 37, "Input",ExpressionUUID->"c91fa3ae-0487-418c-b482-7293acdc7c03"],
+Cell[123867, 2941, 2299, 53, 173, "Output",ExpressionUUID->"47bce9f4-40c4-444a-b7e1-58289adf8071"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[126203, 2999, 422, 9, 37, "Input",ExpressionUUID->"0ee3f8e2-8f45-4b5d-a0fc-16bcc65306fc"],
+Cell[126628, 3010, 149, 2, 42, "Output",ExpressionUUID->"ec32d5c9-ffd4-4b14-bbd5-e2d7873b3404"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[126814, 3017, 450, 9, 37, "Input",ExpressionUUID->"273c0f59-9654-4135-aed7-c937f2fd81ad"],
+Cell[127267, 3028, 2920, 80, 151, "Output",ExpressionUUID->"325d3918-9561-431b-a31b-2faddaecf4ae"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[130224, 3113, 204, 3, 37, "Input",ExpressionUUID->"d91eec7e-4974-4ac3-a6c4-10461ec77a77"],
+Cell[130431, 3118, 917, 22, 69, "Output",ExpressionUUID->"5fee4604-d3f3-456e-b924-45bf08666310"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[131385, 3145, 366, 7, 37, "Input",ExpressionUUID->"76ebece4-7e99-4c1c-9690-ac8a680176a6"],
+Cell[131754, 3154, 369, 6, 42, "Output",ExpressionUUID->"c46ab15c-2d4b-40c3-96f6-797b50e58a6c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[132160, 3165, 247, 4, 37, "Input",ExpressionUUID->"7ea65a41-a0fa-4bf8-b1bb-32d9d84d70cb"],
+Cell[132410, 3171, 238, 3, 42, "Output",ExpressionUUID->"ea2aa829-f1db-4a7c-b274-b0bb791abfdd"]
+}, Open  ]],
+Cell[132663, 3177, 378, 8, 37, "Input",ExpressionUUID->"0ac2468b-4f56-4aa5-96bb-91145168944b"],
+Cell[CellGroupData[{
+Cell[133066, 3189, 108, 1, 37, "Input",ExpressionUUID->"16cf6f7f-aa8b-4865-a310-8abdfc5eaf8c"],
+Cell[133177, 3192, 9984, 260, 134, "Output",ExpressionUUID->"9c684883-def1-4f38-a3d1-2b81d647f1f0"]
+}, Open  ]],
+Cell[143176, 3455, 390, 8, 64, "Input",ExpressionUUID->"65cbfa55-96a3-4f50-8961-859eccb41a79"],
+Cell[143569, 3465, 512, 13, 37, "Input",ExpressionUUID->"8541e5f1-4bda-4a55-b04f-a42d68a5c1dc"],
+Cell[144084, 3480, 645, 17, 37, "Input",ExpressionUUID->"ecbd516c-cd81-4303-b526-0d3026a4747f"],
+Cell[CellGroupData[{
+Cell[144754, 3501, 202, 3, 37, "Input",ExpressionUUID->"cea333a1-848e-491b-a0f8-c56131dfc43f"],
+Cell[144959, 3506, 176, 2, 42, "Output",ExpressionUUID->"c9e77f35-baaf-4ff0-a375-6abbc8548a01"]
+}, Open  ]],
+Cell[145150, 3511, 392, 8, 37, "Input",ExpressionUUID->"7ca5415d-7320-4057-9589-0a4403e8a1f8"],
+Cell[145545, 3521, 255, 5, 37, "Input",ExpressionUUID->"0aa67f15-4f76-4c9e-b893-e31fe4b1541a"]
+}, Open  ]]
+}
+]
+*)
+
